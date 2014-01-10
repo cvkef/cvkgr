@@ -65,6 +65,7 @@ GEM
       sprockets-helpers (~> 1.0.0)
       sprockets-sass (~> 1.0.0)
     multi_json (1.8.4)
+    nprogress-rails (0.1.2.3)
     rack (1.5.2)
     rack-livereload (0.3.15)
       rack
@@ -105,5 +106,6 @@ DEPENDENCIES
   jquery-middleman
   middleman
   middleman-livereload
+  nprogress-rails
   slim
   turbolinks

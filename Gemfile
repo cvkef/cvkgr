@@ -16,3 +16,4 @@ gem 'bootstrap-sass'
 # Javascript
 gem 'jquery-middleman'
 gem 'turbolinks', require: false
+gem 'nprogress-rails', require: false
