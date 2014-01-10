@@ -6,8 +6,8 @@ set :slim, pretty: true
 activate :i18n, langs: [:en]
 
 # Pretty URLs
-activate :directory_indexes
-set :index_file, 'index.html'
+#activate :directory_indexes
+set :index_file, 'profile.html'
 
 # Reload the browser automatically whenever files change
 activate :livereload
@@ -28,6 +28,11 @@ helpers do
   # Page Title
   def page_title
     current_page.data.title ? "#{I18n.t(current_page.data.title)} | #{I18n.t('cvk')}" : I18n.t('cvk')
+  end
+
+  # Active Menu Item
+  def current_menu(page)
+    'active' if @page_id == page
   end
 
 end

@@ -1,4 +1,16 @@
 ---
 en:
   cvk: 'CvK'
-  hello_world: 'Hello World of CvK!'
+
+  titles:
+    welcome: 'Welcome!'
+    resume: 'Resume'
+    contact: 'Contact'
+
+  navigation:
+    profile: 'Profile'
+    resume: 'Resume'
+    contact: 'Contact'
+
+  footer:
+    copyright: 'Copyright &copy; 2007 Chrisovalantis Kefalidis. All rights reserved.'

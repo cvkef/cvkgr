@@ -1,0 +1,7 @@
+div#navigation
+  - data.base.navigation.each do |n|
+    a class="#{current_menu(n.title+'.html')}" href="#{n.title}.html"
+      i class="fa fa-#{n.icon} fa-3x hidden-xs"
+      i class="fa fa-#{n.icon} fa-2x visible-xs"
+      span.title
+        = I18n.t("navigation.#{n.title}")

@@ -1,0 +1,5 @@
+---
+navigation:
+  - { title: 'profile', icon: 'user' }
+  - { title: 'resume',  icon: 'trophy' }
+  - { title: 'contact', icon: 'envelope' }

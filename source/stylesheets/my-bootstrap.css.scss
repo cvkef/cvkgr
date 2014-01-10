@@ -47,9 +47,36 @@ $list-group-border-radius:  $border-radius-base;
 $panel-border-radius:       $border-radius-base;
 $thumbnail-border-radius:   $border-radius-base;
 
+// Media queries breakpoints
+// -------------------------
+$screen-xs:                 480px;
+$screen-xs-min:             $screen-xs;
+$screen-phone:              $screen-xs-min;
+$screen-sm:                 768px;
+$screen-sm-min:             $screen-sm;
+$screen-tablet:             $screen-sm-min;
+$screen-md:                 992px;
+$screen-md-min:             $screen-md;
+$screen-desktop:            $screen-md-min;
+$screen-lg:                 $screen-md;
+$screen-lg-min:             $screen-lg;
+$screen-lg-desktop:         $screen-lg-min;
+$screen-xs-max:             ($screen-sm-min - 1);
+$screen-sm-max:             ($screen-md-min - 1);
+$screen-md-max:             ($screen-lg-min - 1);
+
 // Grid system
 // -------------------------
-$grid-float-breakpoint-max:           ($grid-float-breakpoint - 1);
+$grid-float-breakpoint-max: ($grid-float-breakpoint - 1);
+
+// Container sizes
+// -------------------------
+$container-tablet:          ((670px + $grid-gutter-width));
+$container-sm:              $container-tablet;
+$container-desktop:         ((910px + $grid-gutter-width));
+$container-md:              $container-desktop;
+$container-large-desktop:   ((910px + $grid-gutter-width));
+$container-lg:              $container-large-desktop;
 
 // Core mixins
 @import 'bootstrap/mixins';
@@ -63,6 +90,7 @@ $grid-float-breakpoint-max:           ($grid-float-breakpoint - 1);
 @import 'bootstrap/type';
 @import 'bootstrap/code';
 @import 'bootstrap/grid';
+
 @import 'bootstrap/tables';
 @import 'bootstrap/forms';
 @import 'bootstrap/buttons';

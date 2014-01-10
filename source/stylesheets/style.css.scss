@@ -14,7 +14,6 @@ $app-clr-lightblue:   #598cff;
 $app-clr-darkblue:    #3b5998;
 
 
-
 /*
     Imports
 */
@@ -55,9 +54,114 @@ $app-clr-darkblue:    #3b5998;
 // Base
 // -------------------------
 body{
+  padding-top: 40px;
   font-weight: 400;
   background-image: image-url('bg_pattern_trans.png');
-
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: none;
+}
+
+// Social
+// -------------------------
+#social{
+  margin-bottom: 10px;
+  text-align: right;
+
+  .social-btn{
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    vertical-align: center;
+    display: inline-block;
+    background-color: $app-clr-lightgray;
+    border: 1px solid darken($app-clr-lightgray, 6%);
+
+    i{
+      font-size: 18px;
+      color: $app-clr-darkgray;
+    }
+
+    &:hover{
+      background-color: $app-clr-darkblue;
+      border-color: darken($app-clr-darkblue, 6%);
+      i{
+        color: $app-clr-white;
+      }
+      transition: all .5s ease-out;
+    }
+  }
+}
+
+// Page
+// -------------------------
+#page{
+  @include gradient-vertical($app-clr-lightgray, darken($app-clr-lightgray, 5%), 80%, 100%);
+  @include box-shadow(0 0 5px rgba(0,0,0,.2));
+
+  height: 400px;
+  margin-bottom: 10px;
+  padding: 0;
+  background-color: $app-clr-lightgray;
+  border: 1px solid darken($app-clr-lightgray, 20%);
+}
+
+// Navigation
+// -------------------------
+#navigation{
+  //@include box-shadow(0 0 5px rgba(0,0,0,.4));
+
+  width: 100%;
+  position: relative;
+  text-align: center;
+  background-color: $app-clr-darkblue;
+
+  a{
+    //@include box-shadow(0 0 5px rgba(0,0,0,.2));
+    width: 100px;
+    padding: 10px 0;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    color: $app-clr-lightgray;
+    background-color: $app-clr-darkblue;
+
+    i{
+      display: block;
+    }
+    .title{
+      font-size: 15px;
+      font-weight: 300;
+    }
+
+    &:hover{
+      color: $app-clr-white;
+      background-color: darken($app-clr-darkblue, 12%);
+      i{
+        color: $app-clr-white;
+      }
+      transition: all .5s ease-out;
+    }
+
+    &.active{
+      margin-top: -8px;
+      padding-top: 18px;
+      color: $app-clr-darkblue;
+      background-color: $app-clr-lightgray;
+      @include gradient-vertical(darken($app-clr-lightgray, 5%), $app-clr-lightgray, 0%, 15%);
+      border: 1px solid darken($app-clr-lightgray, 10%);
+      border-bottom: 0 none;
+      @include border-top-radius(4px);
+      i{
+        color: $app-clr-darkblue;
+      }
+    }
+  }
+}
+
+// Footer
+// -------------------------
+#footer{
+  font-size: .9em;
+  text-align: right;
 }
