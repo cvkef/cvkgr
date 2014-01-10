@@ -1,3 +1,8 @@
+# Slim
+require 'slim'
+set :slim, pretty: true
+
+
 ###
 # Compass
 ###
