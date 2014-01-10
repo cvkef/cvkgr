@@ -12,3 +12,6 @@ gem 'middleman-livereload'
 # Layout
 gem 'slim'
 gem 'bootstrap-sass'
+
+# Javascript
+gem 'jquery-middleman'
