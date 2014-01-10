@@ -22,7 +22,15 @@ set :js_dir, 'javascripts'
 set :images_dir, 'images'
 
 
+# Custom Helpers
+helpers do
 
+  # Page Title
+  def page_title
+    current_page.data.title ? "#{I18n.t(current_page.data.title)} | #{I18n.t('cvk')}" : I18n.t('cvk')
+  end
+
+end
 
 
 ###
@@ -61,16 +69,6 @@ set :images_dir, 'images'
 
 # Automatic image dimensions on image_tag helper
 # activate :automatic_image_sizes
-
-
-
-# Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
-
 
 
 # Build-specific configuration
