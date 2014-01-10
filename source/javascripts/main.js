@@ -1,27 +1,38 @@
 var Application = {};
 
-
-// Application :: Fetch Page
+/*
+    NProgress
+*/
+// NProgress Setup
 // -------------------------
-Application.fetchPage = function ()
-{
-  console.log('[Turbolinks] Fetching page...');
-}
+NProgress.configure(
+  {
+    showSpinner: false
+  }
+);
 
-// Application :: Change Page
-// -------------------------
-Application.changePage = function ()
-{
-  console.log('[Turbolinks] Page changed!');
-}
 
-// Application :: Initialize
+/*
+    Application
+*/
+// Initialize
 // -------------------------
 Application.initialize = function ()
 {
   console.log('[Application::initialize] Intializing Application');
 }
-
+// Fetch Page
+// -------------------------
+Application.fetchPage = function ()
+{
+  console.log('[Turbolinks] Fetching page...');
+}
+// Change Page
+// -------------------------
+Application.changePage = function ()
+{
+  console.log('[Turbolinks] Page changed!');
+}
 // DOM Ready
 // -------------------------
 $(document).ready(

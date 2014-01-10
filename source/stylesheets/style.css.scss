@@ -1,6 +1,19 @@
 @charset "utf-8";
 
-// Imports
+/*
+    Imports
+*/
+// Normalize
 // -------------------------
 @import 'normalize';
+// Bootstrap
+// -------------------------
 @import 'custom-bootstrap';
+// NProgress
+// -------------------------
+//$nprogress-color: $app-clr-lightblue;
+@import 'nprogress';
+@import 'nprogress-bootstrap';
+#nprogress .peg{
+  @include box-shadow(none);
+}
