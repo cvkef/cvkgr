@@ -8,3 +8,6 @@ gem 'middleman'
 
 # Live-reloading plugin
 gem 'middleman-livereload'
+
+# Layout
+gem 'slim-rails'
