@@ -1,5 +1,5 @@
 GEM
-  remote: http://rubygems.org/
+  remote: https://rubygems.org/
   specs:
     activesupport (3.2.16)
       i18n (~> 0.6, >= 0.6.4)
@@ -92,6 +92,5 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  middleman (~> 3.2.1)
-  middleman-livereload (~> 3.1.0)
-  wdm (~> 0.1.0)
+  middleman
+  middleman-livereload
