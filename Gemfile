@@ -12,6 +12,7 @@ gem 'middleman-livereload'
 # Layout
 gem 'slim'
 gem 'bootstrap-sass'
+gem 'font-awesome-middleman'
 
 # Javascript
 gem 'jquery-middleman'
