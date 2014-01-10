@@ -15,3 +15,4 @@ gem 'bootstrap-sass'
 
 # Javascript
 gem 'jquery-middleman'
+gem 'turbolinks', require: false
