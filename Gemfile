@@ -10,4 +10,4 @@ gem 'middleman'
 gem 'middleman-livereload'
 
 # Layout
-gem 'slim-rails'
+gem 'slim'
