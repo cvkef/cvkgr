@@ -11,3 +11,4 @@ gem 'middleman-livereload'
 
 # Layout
 gem 'slim'
+gem 'bootstrap-sass'
