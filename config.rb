@@ -1,10 +1,29 @@
-# Slim
+# Slim Template Engine
 require 'slim'
 set :slim, pretty: true
+
+# Localization
+activate :i18n, langs: [:en]
 
 # Pretty URLs
 activate :directory_indexes
 set :index_file, 'index.html'
+
+# Reload the browser automatically whenever files change
+activate :livereload
+
+# Stylesheets Directory
+set :css_dir, 'stylesheets'
+
+# Javascripts Directory
+set :js_dir, 'javascripts'
+
+# Images Directory
+set :images_dir, 'images'
+
+
+
+
 
 ###
 # Compass
@@ -43,8 +62,7 @@ set :index_file, 'index.html'
 # Automatic image dimensions on image_tag helper
 # activate :automatic_image_sizes
 
-# Reload the browser automatically whenever files change
-activate :livereload
+
 
 # Methods defined in the helpers block are available in templates
 # helpers do
@@ -53,11 +71,7 @@ activate :livereload
 #   end
 # end
 
-set :css_dir, 'stylesheets'
 
-set :js_dir, 'javascripts'
-
-set :images_dir, 'images'
 
 # Build-specific configuration
 configure :build do
