@@ -2,6 +2,9 @@
 require 'slim'
 set :slim, pretty: true
 
+# Pretty URLs
+activate :directory_indexes
+set :index_file, 'index.html'
 
 ###
 # Compass
