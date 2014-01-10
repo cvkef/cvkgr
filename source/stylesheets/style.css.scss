@@ -3,12 +3,16 @@
 /*
     Imports
 */
+
 // Normalize
 // -------------------------
 @import 'normalize';
 // Bootstrap
 // -------------------------
-@import 'custom-bootstrap';
+@import 'my-bootstrap';
+// FontAwesome
+// -------------------------
+@import 'my-font-awesome';
 // NProgress
 // -------------------------
 //$nprogress-color: $app-clr-lightblue;
@@ -17,3 +21,4 @@
 #nprogress .peg{
   @include box-shadow(none);
 }
+
