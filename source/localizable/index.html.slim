@@ -3,20 +3,19 @@ title: 'titles.welcome'
 ---
 
 div.row
-
   div.col-sm-4.col-md-3
     div#gravatar
       img src="#{data.base.uri.gravatar}?s=160" alt="#{full_name}"
 
-  div#profile-main.center-text-xs.center-text-sm.col.sm-8.col-md-4
+  div#profile-main.center-text-xs.center-text-sm.col.sm-8.col-md-5
     h1.title
       = full_name
     h4.subtitle
       = I18n.t('profile.job_title')
     p.about
-      = lorem.words 30
+      = I18n.t('profile.about')
 
-  div#profile-extra.col-sm-12.col-md-5
+  div#profile-extra.col-sm-12.col-md-4
     hr.visible-xs.visible-sm
 
     ul
@@ -34,7 +33,8 @@ div.row
 
       li
         label.title = I18n.t('profile.text.email')
-        span.value = data.base.cvk.email
+        span.value
+          a href='contact.html' = data.base.cvk.email
 
       li
         label.title = I18n.t('profile.text.phone')
@@ -44,3 +44,18 @@ div.row
         label.title = I18n.t('profile.text.website')
         span.value
           a href="http://#{data.base.cvk.website}" target="_blank" = data.base.cvk.website
+
+div.row.hidden-xs.hidden-sm
+  div#qrcode.text-right.col-md-12
+
+    a#qrcode-btn href='#'
+      span = I18n.t('click_for')
+      i.fa.fa-qrcode
+
+    div#qrcode-overlay
+      div.qrcode-box
+        a.qrcode-close-btn.pull-right href='#'
+          i.fa.fa-times
+
+        div.qrcode-image
+          = image_tag 'cvk_qrcode.png', class: 'img-thumbnail'

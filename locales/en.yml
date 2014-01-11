@@ -25,6 +25,10 @@ en:
     job_title:  'Software Engineer | Web Developer'
     birthday:   '30 October 1984'
     address:    'P. Faliron, 17561, Greece'
+    about:      "I'm a freelancer web developer based in Athens, Greece, and my passion is to bring into life clean, simple and sophisticated user experiences."
+
+  click_for: 'click for'
+  close: 'close'
 
 
   footer:

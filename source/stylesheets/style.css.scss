@@ -22,7 +22,7 @@
 @import 'my-font-awesome';
 // NProgress
 // -------------------------
-//$nprogress-color: $app-clr-lightblue;
+$nprogress-color: $app-clr-darkblue;
 @import 'nprogress';
 @import 'nprogress-bootstrap';
 #nprogress .peg{
@@ -40,6 +40,20 @@
 *{
   outline: 0 none;
 }
+hr{
+  border-color: darken($app-clr-lightgray, 20%);
+  @include box-shadow(0 1px 1px rgba(0,0,0,.1));
+}
+.row{
+  margin-left: auto;
+  margin-right: auto;
+}
+.text-left{
+  text-align: left;
+}
+.text-right{
+  text-align: right;
+}
 .text-center{
   text-align: center;
 }
@@ -47,7 +61,7 @@
 // Base
 // -------------------------
 body{
-  padding-top: 40px;
+  padding-top: 20px;
   font-weight: 400;
   background-image: image-url('bg_pattern_trans.png');
   -webkit-font-smoothing: antialiased;
@@ -67,7 +81,7 @@ body{
     text-align: center;
     vertical-align: center;
     display: inline-block;
-    background-color: $app-clr-lightgray;
+    background-color: darken($app-clr-lightgray, 6%);
     border: 1px solid darken($app-clr-lightgray, 6%);
 
     i{
@@ -92,8 +106,6 @@ body{
   @include gradient-vertical($app-clr-lightgray, darken($app-clr-lightgray, 5%), 80%, 100%);
   @include box-shadow(0 0 5px rgba(0,0,0,.2));
 
-  min-height: 400px;
-  margin-bottom: 10px;
   padding: 0;
   background-color: $app-clr-lightgray;
   border: 1px solid darken($app-clr-lightgray, 20%);
@@ -111,13 +123,17 @@ body{
 
   a{
     //@include box-shadow(0 0 5px rgba(0,0,0,.2));
-    width: 100px;
+    width: 120px;
     padding: 10px 0;
     display: inline-block;
     text-align: center;
     text-decoration: none;
     color: $app-clr-lightgray;
     background-color: $app-clr-darkblue;
+
+    @media (max-width: $screen-sm-min) {
+      width: 90px;
+    }
 
     i{
       display: block;
@@ -166,8 +182,8 @@ body{
 
   img{
     @extend .img-circle;
-    @include box-shadow(0 0 20px rgba(0,0,0,.2));
-    border: 1px solid $app-clr-lightgray;
+    @include box-shadow(0 0 20px rgba($app-clr-darkgray,.4));
+    border: 3px solid darken($app-clr-lightgray, 15%);
   }
 }
 
@@ -191,13 +207,10 @@ body{
 
 #profile-extra{
   margin-top: 15px;
-  border-left: 1px solid darken($app-clr-lightgray, 6%);
 
   hr{
     margin-top: 20px;
     margin-bottom: -20px;
-    border-color: darken($app-clr-lightgray, 20%);
-    @include box-shadow(0 1px 1px rgba(0,0,0,.1));
   }
 
   ul{
@@ -218,12 +231,53 @@ body{
     }
 
     @media (max-width: $screen-xs-max) {
-      border-left: 0 none;
-      width: 80%;
+      width: 100%;
     }
     @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
-      border-left: 0 none;
       width: 50%;
+    }
+  }
+
+  @media (min-width: $screen-md-min) {
+    border-left: 1px solid darken($app-clr-lightgray, 6%);
+  }
+}
+
+// QRCode
+// -------------------------
+#qrcode{
+  font-size: 12px;
+  line-height: 16px;
+
+  i{
+    margin-left: 3px;
+    font-size: 16px;
+  }
+
+  #qrcode-overlay{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($app-clr-darkgray, .75);
+    text-align: center;
+
+    .qrcode-box{
+      width: 200px;
+      margin: 10% auto 0;
+
+      .qrcode-close-btn{
+        margin-bottom: 4px;
+        padding: 5px 10px;
+        text-align: right;
+        color: $app-clr-white;
+
+        &:hover{
+          color: $brand-danger;
+        }
+      }
     }
   }
 }
@@ -232,6 +286,7 @@ body{
 // Footer
 // -------------------------
 #footer{
+  margin-top: 5px;
   font-size: .9em;
   text-align: right;
 }

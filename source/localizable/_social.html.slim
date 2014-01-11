@@ -1,4 +1,4 @@
-div#social.container
+div#social.row
   - data.social.profile.each do |p|
     a class="social-btn social-btn-#{p.title}" href="#{p.url}" target="_blank"
       i class="fa fa-#{p.title}"

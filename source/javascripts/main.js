@@ -7,6 +7,8 @@ var Application = {};
 Application.initialize = function ()
 {
   console.log('[Application::initialize] Intializing Application');
+
+  $(document).prepareQrcode();
 }
 // Fetch Page
 Application.fetchPage = function ()
@@ -27,6 +29,32 @@ Application.restorePage = function ()
   NProgress.remove();
 }
 
+
+$.fn.prepareQrcode = function ()
+{
+  var $qrcode, $qrcodeBtn, $qrcodeCloseBtn, $qrcodeOverlay;
+
+  $qrcode = $('#qrcode');
+  $qrcodeBtn = $qrcode.find('#qrcode-btn');
+  $qrcodeCloseBtn = $qrcode.find('.qrcode-close-btn');
+  $qrcodeOverlay = $qrcode.find('#qrcode-overlay');
+
+  $qrcodeBtn.on('click.cvk.qrcode',
+    function (e)
+    {
+      e.preventDefault();
+      $qrcodeOverlay.fadeIn(250);
+    }
+  );
+
+  $qrcodeCloseBtn.on('click.cvk.qrcodeClose',
+    function (e)
+    {
+      e.preventDefault();
+      $qrcodeOverlay.fadeOut(250);
+    }
+  );
+};
 
 /*
     DOM Ready
