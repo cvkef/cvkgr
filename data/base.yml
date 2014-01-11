@@ -1,5 +1,15 @@
 ---
 navigation:
-  - { title: 'profile', icon: 'user' }
-  - { title: 'resume',  icon: 'trophy' }
+  - { title: 'index',   icon: 'user' }
+  - { title: 'resume',  icon: 'info' }
   - { title: 'contact', icon: 'envelope' }
+
+uri:
+  gravatar: 'https://s.gravatar.com/avatar/e0892d801145af3dac4ae4c24f6a0ccd'
+
+cvk:
+  nickname: 'cvk'
+  website:  'www.cvk.gr'
+  email:    'valantis@cvk.gr'
+  phone:    '0030.693.7755.766'
+  skype:    'cv_kef'

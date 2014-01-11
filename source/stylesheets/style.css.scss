@@ -1,18 +1,5 @@
 @charset "utf-8";
 
-/*
-    Colors
-*/
-
-$app-clr-white:       #fff;
-$app-clr-black:       #000;
-
-$app-clr-lightgray:   #e9eaed;
-$app-clr-darkgray:    #444;
-
-$app-clr-lightblue:   #598cff;
-$app-clr-darkblue:    #3b5998;
-
 
 /*
     Imports
@@ -21,6 +8,9 @@ $app-clr-darkblue:    #3b5998;
 // Google Fonts
 // -------------------------
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
+// Variables
+// -------------------------
+@import 'variables';
 // Normalize
 // -------------------------
 @import 'normalize';
@@ -50,6 +40,9 @@ $app-clr-darkblue:    #3b5998;
 *{
   outline: 0 none;
 }
+.text-center{
+  text-align: center;
+}
 
 // Base
 // -------------------------
@@ -64,7 +57,7 @@ body{
 // Social
 // -------------------------
 #social{
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   text-align: right;
 
   .social-btn{
@@ -99,7 +92,7 @@ body{
   @include gradient-vertical($app-clr-lightgray, darken($app-clr-lightgray, 5%), 80%, 100%);
   @include box-shadow(0 0 5px rgba(0,0,0,.2));
 
-  height: 400px;
+  min-height: 400px;
   margin-bottom: 10px;
   padding: 0;
   background-color: $app-clr-lightgray;
@@ -159,9 +152,99 @@ body{
   }
 }
 
+// Main
+// -------------------------
+#main{
+  padding: 10px;
+}
+
+// Profile
+// -------------------------
+#gravatar{
+  padding-top: 20px;
+  text-align: center;
+
+  img{
+    @extend .img-circle;
+    @include box-shadow(0 0 20px rgba(0,0,0,.2));
+    border: 1px solid $app-clr-lightgray;
+  }
+}
+
+#profile-main{
+  .title{
+    font-size: 36px;
+    font-weight: 700;
+  }
+
+  .subtitle{
+    font-size: 13px;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-shadow: 0 2px 2px rgba(255,255,255,.5);
+  }
+
+  .about{
+    margin-top: 20px;
+  }
+}
+
+#profile-extra{
+  margin-top: 15px;
+  border-left: 1px solid darken($app-clr-lightgray, 6%);
+
+  hr{
+    margin-top: 20px;
+    margin-bottom: -20px;
+    border-color: darken($app-clr-lightgray, 20%);
+    @include box-shadow(0 1px 1px rgba(0,0,0,.1));
+  }
+
+  ul{
+    list-style: none;
+    width: 90%;
+    margin: 40px auto;
+    padding-left: 0;
+
+    li{
+      margin-bottom: 5px;
+      .title{
+        width: 35%;
+      }
+
+      .value{
+
+      }
+    }
+
+    @media (max-width: $screen-xs-max) {
+      border-left: 0 none;
+      width: 80%;
+    }
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+      border-left: 0 none;
+      width: 50%;
+    }
+  }
+}
+
+
 // Footer
 // -------------------------
 #footer{
   font-size: .9em;
   text-align: right;
+}
+
+// Grid :: Media Queries
+// -------------------------
+.center-text-xs {
+  @media (max-width: $screen-xs-max) {
+    text-align: center !important;
+  }
+}
+.center-text-sm {
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    text-align: center !important;
+  }
 }

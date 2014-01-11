@@ -22,8 +22,11 @@ html
 
       / Main Page
       div#page.container
+        / Navigation
         = partial 'navigation'
-        = yield
+        / Main Content
+        div#main
+          = yield
 
       / Footer
       = partial 'footer'

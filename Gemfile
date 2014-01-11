@@ -16,5 +16,6 @@ gem 'font-awesome-middleman'
 
 # Javascript
 gem 'jquery-middleman'
+#gem 'jquery-turbolinks', require: false
 gem 'turbolinks', require: false
 gem 'nprogress-rails', require: false

@@ -1,16 +1,31 @@
 ---
 en:
-  cvk: 'CvK'
-
   titles:
-    welcome: 'Welcome!'
+    welcome: 'Welcome'
     resume: 'Resume'
     contact: 'Contact'
 
   navigation:
-    profile: 'Profile'
+    index: 'Profile'
     resume: 'Resume'
     contact: 'Contact'
+
+  profile:
+    text:
+      name:     'Name'
+      birthday: 'Birthday'
+      address:  'Address'
+      email:    'Email'
+      phone:    'Phone'
+      website:  'Website'
+
+    first_name: 'Chrisovalantis'
+    last_name:  'Kefalidis'
+    nickname:   'CvK'
+    job_title:  'Software Engineer | Web Developer'
+    birthday:   '30 October 1984'
+    address:    'P. Faliron, 17561, Greece'
+
 
   footer:
     copyright: 'Copyright &copy; 2007 Chrisovalantis Kefalidis. All rights reserved.'

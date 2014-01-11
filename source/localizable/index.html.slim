@@ -1,0 +1,46 @@
+---
+title: 'titles.welcome'
+---
+
+div.row
+
+  div.col-sm-4.col-md-3
+    div#gravatar
+      img src="#{data.base.uri.gravatar}?s=160" alt="#{full_name}"
+
+  div#profile-main.center-text-xs.center-text-sm.col.sm-8.col-md-4
+    h1.title
+      = full_name
+    h4.subtitle
+      = I18n.t('profile.job_title')
+    p.about
+      = lorem.words 30
+
+  div#profile-extra.col-sm-12.col-md-5
+    hr.visible-xs.visible-sm
+
+    ul
+      li
+        label.title = I18n.t('profile.text.name')
+        span.value = full_name
+      
+      li
+        label.title = I18n.t('profile.text.birthday')
+        span.value = I18n.t('profile.birthday')
+
+      li
+        label.title = I18n.t('profile.text.address')
+        span.value = I18n.t('profile.address')
+
+      li
+        label.title = I18n.t('profile.text.email')
+        span.value = data.base.cvk.email
+
+      li
+        label.title = I18n.t('profile.text.phone')
+        span.value = data.base.cvk.phone
+
+      li
+        label.title = I18n.t('profile.text.website')
+        span.value
+          a href="http://#{data.base.cvk.website}" target="_blank" = data.base.cvk.website
