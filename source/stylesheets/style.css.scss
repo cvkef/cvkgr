@@ -43,6 +43,16 @@
 hr{
   border-color: darken($app-clr-lightgray, 20%);
   @include box-shadow(0 1px 1px rgba(0,0,0,.1));
+
+  &.block-divider{
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+}
+i{
+  &.inline{
+    margin: 0 4px;
+  }
 }
 .row{
   margin-left: auto;
@@ -57,6 +67,12 @@ hr{
 .text-center{
   text-align: center;
 }
+.block-heading{
+  margin-bottom: 20px;
+  padding: 0 0 4px 0;
+  font-weight: 300;
+  border-bottom: 1px solid darken($app-clr-lightgray, 6%);
+}
 
 // Base
 // -------------------------
@@ -66,6 +82,51 @@ body{
   background-image: image-url('bg_pattern_trans.png');
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: none;
+}
+
+// Lists
+// -------------------------
+ul{
+  list-style: none;
+
+  &.list-info{
+    width: 90%;
+    margin: 20px auto;
+    padding-left: 0;
+
+    li{
+      margin-bottom: 5px;
+      .title{
+        width: 35%;
+      }
+
+      .value{
+
+      }
+    }
+
+    @media (max-width: $screen-xs-max) {
+      width: 100%;
+    }
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+      width: 50%;
+    }
+  }
+}
+
+// Header
+// -------------------------
+#header{
+
+  #logo{
+    h1{
+      margin: 0;
+      padding: 0;
+      @media (max-width: $screen-xs-max) {
+        margin-bottom: 15px;
+      }
+    }
+  }
 }
 
 // Social
@@ -177,13 +238,21 @@ body{
 // Profile
 // -------------------------
 #gravatar{
+  position: relative;
   padding-top: 20px;
   text-align: center;
 
+  span{
+    position: relative;
+    top: 50px;
+  }
   img{
     @extend .img-circle;
     @include box-shadow(0 0 20px rgba($app-clr-darkgray,.4));
     border: 3px solid darken($app-clr-lightgray, 15%);
+
+    position: relative;
+    top: -15px;
   }
 }
 
@@ -208,27 +277,8 @@ body{
 #profile-extra{
   margin-top: 15px;
 
-  hr{
-    margin-top: 20px;
-    margin-bottom: -20px;
-  }
-
-  ul{
-    list-style: none;
-    width: 90%;
+  .list-info{
     margin: 40px auto;
-    padding-left: 0;
-
-    li{
-      margin-bottom: 5px;
-      .title{
-        width: 35%;
-      }
-
-      .value{
-
-      }
-    }
 
     @media (max-width: $screen-xs-max) {
       width: 100%;
@@ -243,6 +293,7 @@ body{
   }
 }
 
+
 // QRCode
 // -------------------------
 #qrcode{
@@ -250,7 +301,6 @@ body{
   line-height: 16px;
 
   i{
-    margin-left: 3px;
     font-size: 16px;
   }
 
@@ -280,6 +330,26 @@ body{
       }
     }
   }
+}
+
+// Contact
+// -------------------------
+.contact{
+  .list-info{
+    @media (max-width: $screen-sm-max) {
+      width: 100%;
+      li{
+        width: 100%;
+
+        .title{
+          width: 100%;
+          display: block;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
 }
 
 

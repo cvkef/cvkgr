@@ -19,6 +19,7 @@ en:
       phone:    'Phone'
       website:  'Website'
 
+    fetching_gravatar: 'Fetching Gravatar...'
     first_name: 'Chrisovalantis'
     last_name:  'Kefalidis'
     nickname:   'CvK'
@@ -27,6 +28,11 @@ en:
     address:    'P. Faliron, 17561, Greece'
     about:      "I'm a freelancer web developer based in Athens, Greece, and my passion is to bring into life clean, simple and sophisticated user experiences."
 
+  contact:
+    contact_info: 'Contact Info'
+    leave_message: 'Leave me a message'
+
+  vcard: 'vCard'
   click_for: 'click for'
   close: 'close'
 

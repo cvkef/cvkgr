@@ -5,6 +5,7 @@ title: 'titles.welcome'
 div.row
   div.col-sm-4.col-md-3
     div#gravatar
+      span = I18n.t('profile.fetching_gravatar')
       img src="#{data.base.uri.gravatar}?s=160" alt="#{full_name}"
 
   div#profile-main.center-text-xs.center-text-sm.col.sm-8.col-md-5
@@ -18,7 +19,7 @@ div.row
   div#profile-extra.col-sm-12.col-md-4
     hr.visible-xs.visible-sm
 
-    ul
+    ul.list-info
       li
         label.title = I18n.t('profile.text.name')
         span.value = full_name
@@ -49,8 +50,8 @@ div.row.hidden-xs.hidden-sm
   div#qrcode.text-right.col-md-12
 
     a#qrcode-btn href='#'
-      span = I18n.t('click_for')
-      i.fa.fa-qrcode
+      i.inline.fa.fa-qrcode
+      span = I18n.t('vcard')
 
     div#qrcode-overlay
       div.qrcode-box

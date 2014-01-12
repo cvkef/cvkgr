@@ -19,8 +19,11 @@ html
   body class="#{page_classes}"
 
     div#page-wrapper.container
-      / Social
-      = partial 'social'
+      div#header.row
+        / Logo
+        = partial 'logo'
+        / Social
+        = partial 'social'
 
       / Main Page
       div#page

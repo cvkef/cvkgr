@@ -1,3 +1,31 @@
 ---
 title: 'titles.contact'
 ---
+
+div.row
+
+  div.col-xs-12.col-sm-4
+    h3.block-heading = I18n.t('contact.contact_info')
+    ul.list-info
+      li
+        label.title = I18n.t('profile.text.address')
+        span.value = I18n.t('profile.address')
+
+      li
+        label.title = I18n.t('profile.text.email')
+        span.value
+          a href='contact.html' = data.base.cvk.email
+
+      li
+        label.title = I18n.t('profile.text.phone')
+        span.value = data.base.cvk.phone
+
+      li
+        label.title = I18n.t('profile.text.website')
+        span.value
+          a href="http://#{data.base.cvk.website}" target="_blank" = data.base.cvk.website
+
+  div.col-xs-12.col-sm-8
+    hr.block-divider.visible-xs
+
+    h3.block-heading = I18n.t('contact.leave_message')

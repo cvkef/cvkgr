@@ -53,6 +53,11 @@ helpers do
     'active' if @page_id == page
   end
 
+  # Home Page
+  def homepage?
+    @page_id == '/' || @page_id == 'index.html'
+  end
+
   # Full Name
   def full_name
     "#{I18n.t('profile.first_name')} #{I18n.t('profile.last_name')}"
