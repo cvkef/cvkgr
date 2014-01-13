@@ -1,13 +1,20 @@
 # Slim Template Engine
 require 'slim'
+require 'uglifier'
+require 'rack/google_analytics'
+
 set :slim, pretty: true
 
 # Localization
 activate :i18n, langs: [:en]
 
+
 # Pretty URLs
 #activate :directory_indexes
 #set :index_file, 'profile.html'
+
+# GZip compression
+activate :gzip
 
 # Reload the browser automatically whenever files change
 activate :livereload
@@ -21,22 +28,25 @@ set :js_dir, 'javascripts'
 # Images Directory
 set :images_dir, 'images'
 
+# Google Analytics
+use Rack::GoogleAnalytics, :web_property_id => 'UA-3312587-3'
+
 # Build-specific configuration
 configure :build do
-  # For example, change the Compass output style for deployment
+  # Minify HTML
+  activate :minify_html
+
+  # Minify CSS
   activate :minify_css
 
-  # Minify Javascript on build
-  activate :minify_javascript
+  # Minify JS
+  activate :minify_javascript, :compressor => Uglifier.new()
 
   # Enable cache buster
   activate :asset_hash
 
   # Use relative URLs
   activate :relative_assets
-
-  # Or use a different image path
-  # set :http_prefix, "/Content/images/"
 end
 
 
