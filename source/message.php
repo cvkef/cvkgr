@@ -15,7 +15,7 @@
     }
     
     // PHPMailer
-    require('phpmailer/class.phpmailer.php');
+    require('./phpmailer/class.phpmailer.php');
 
     // Email Configuration
     $mail_host = 'ssl://mail.cvk.gr';
