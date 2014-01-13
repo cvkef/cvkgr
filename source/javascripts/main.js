@@ -191,29 +191,28 @@ $.fn.submitForm = function ()
       {
         url:    url,
         data:   $formData,
-        method: 'post',
-        crossDomain: true
+        method: 'post'
       }
     )
     .done(
       function (data, textStatus, jqXHR)
       {
-        console.log(data);
+        data = $.parseJSON(data);
 
-        $form.scrollToAlert();
-        switch (data.message)
+        switch (data.textMessage)
         {
           case 'invalid_data':
             $('[data-alert-for="invalid_data"]').removeClass('hidden').fadeIn(250);
             break;
 
+          case 'message_delivered':
+            $form.resetForm();
+            $('[data-alert-for="message_delivered"]').removeClass('hidden').fadeIn(250);
+            break;
+
           case 'message_not_delivered':
           default:
             $('[data-alert-for="message_not_delivered"]').removeClass('hidden').fadeIn(250);
-            break;
-
-          case 'message_delivered':
-            $('[data-alert-for="message_delivered"]').removeClass('hidden').fadeIn(250);
             break;
         }
       }
@@ -221,7 +220,6 @@ $.fn.submitForm = function ()
     .fail(
       function (jqXHR, textStatus, errorThrown)
       {
-        console.log(errorThrown);
         $('.alert').hide();
         $('[data-alert-for="message_not_delivered"]').removeClass('hidden').fadeIn(250);
       }
@@ -229,8 +227,7 @@ $.fn.submitForm = function ()
     .always(
       function (data, textStatus, jqXHR)
       {
-        console.log('always', data);
-        $form.buttonState('reset');
+        $form.buttonState('reset').scrollToAlert();
       }
     );
 };

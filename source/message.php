@@ -1,5 +1,5 @@
 <?php
-    
+
     // No Direct Access
     if ( !isset($_POST) || empty($_POST) )
     {
@@ -32,7 +32,7 @@
 
     if ( (strlen($name) < 2) || !filter_var($email, FILTER_VALIDATE_EMAIL) || (strlen($msg) < 2) )
     {
-        echo json_encode( array('status' => 'error', 'message' => 'invalid_data') );
+        echo json_encode( array('status' => 'error', 'textMessage' => 'invalid_data') );
         exit();
     }
 
@@ -155,11 +155,11 @@ EOM;
 
     if ( !$mail->Send() )
     {
-      echo json_encode( array('status' => 'error', 'message' => 'message_not_delivered') );
+      echo json_encode( array('status' => 'error', 'textMessage' => 'message_not_delivered') );
     }
     else
     {
-      echo json_encode( array('status' => 'success', 'message' => 'message_delivered') );
+      echo json_encode( array('status' => 'success', 'textMessage' => 'message_delivered') );
     }
 
 ?>
