@@ -51,8 +51,13 @@ $.fn.resetForm = function ()
 
   $form.find('.form-group').removeClass('has-error');
   $form.find('.form-control').val('');
-  $form.buttonState('reset');
+  $form.buttonState('reset').hideAlerts();
 
+  return $(this);
+};
+
+$.fn.hideAlerts = function ()
+{
   $('.alert').hide();
 
   return $(this);
@@ -169,7 +174,8 @@ $.fn.validateForm = function ()
           {
             if ( !$(field).isValid() ) errors++;
           }
-        );
+        )
+        .hideAlerts();
 
   ( errors > 0 ) ? $form.delay(250).scrollToError().buttonState('reset') : $form.submitForm()
 
@@ -184,8 +190,6 @@ $.fn.submitForm = function ()
   $form = $(this);
   $formData = $form.serialize();
   url = './' + $form.attr('action');
-
-  $('.alert').hide();
 
   $.ajax(
       {
@@ -202,17 +206,17 @@ $.fn.submitForm = function ()
         switch (data.textMessage)
         {
           case 'invalid_data':
-            $('[data-alert-for="invalid_data"]').removeClass('hidden').fadeIn(250);
+            $('[data-alert-for="invalid_data"]').removeClass('hidden').fadeIn(250, $form.scrollToAlert );
             break;
 
           case 'message_delivered':
             $form.resetForm();
-            $('[data-alert-for="message_delivered"]').removeClass('hidden').fadeIn(250);
+            $('[data-alert-for="message_delivered"]').removeClass('hidden').fadeIn(250, $form.scrollToAlert );
             break;
 
           case 'message_not_delivered':
           default:
-            $('[data-alert-for="message_not_delivered"]').removeClass('hidden').fadeIn(250);
+            $('[data-alert-for="message_not_delivered"]').removeClass('hidden').fadeIn(250, $form.scrollToAlert );
             break;
         }
       }
@@ -220,14 +224,13 @@ $.fn.submitForm = function ()
     .fail(
       function (jqXHR, textStatus, errorThrown)
       {
-        $('.alert').hide();
-        $('[data-alert-for="message_not_delivered"]').removeClass('hidden').fadeIn(250);
+        $('[data-alert-for="message_not_delivered"]').removeClass('hidden').fadeIn(250, $form.scrollToAlert );
       }
     )
     .always(
       function (data, textStatus, jqXHR)
       {
-        $form.buttonState('reset').scrollToAlert();
+        $form.buttonState('reset');
       }
     );
 };
