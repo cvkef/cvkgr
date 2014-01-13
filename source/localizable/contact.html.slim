@@ -43,7 +43,7 @@ div.row
       button.close type='button' data-dismiss='alert' aria-hidden='true' &times;
       p.alert-content = I18n.t('contact.message.message_delivered')
 
-    - form_tag './message.php', id: 'contact-form', method: :post
+    - form_tag 'message.php', id: 'contact-form', method: :post
 
       / name
       div.form-group

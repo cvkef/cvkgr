@@ -183,7 +183,7 @@ $.fn.submitForm = function ()
 
   $form = $(this);
   $formData = $form.serialize();
-  url = $form.attr('action');
+  url = './' + $form.attr('action');
 
   $('.alert').hide();
 
