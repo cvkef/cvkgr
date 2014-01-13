@@ -18,7 +18,6 @@ en:
       email:    'Email'
       phone:    'Phone'
       website:  'Website'
-
     fetching_gravatar: 'Fetching Gravatar...'
     first_name: 'Chrisovalantis'
     last_name:  'Kefalidis'
@@ -31,6 +30,20 @@ en:
   contact:
     contact_info: 'Contact Info'
     leave_message: 'Leave me a message'
+    label:
+      name: 'Name'
+      email: 'Email'
+      message: 'Message'
+      submit: 'Submit Message'
+      sending: 'Sending Message...'
+    placeholder:
+      name: 'Enter your Name'
+      email: 'Enter your Email'
+      message: 'Enter your Message'
+    hint:
+      name: 'Please enter your Name. At least 2 characters.'
+      email: 'Please enter a valid email address. e.g. <em>john_doe@example.com</em>.'
+      message: 'Please enter your inquiry.'
 
   vcard: 'vCard'
   click_for: 'click for'

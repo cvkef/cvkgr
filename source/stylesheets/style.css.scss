@@ -67,6 +67,13 @@ i{
 .text-center{
   text-align: center;
 }
+.block-box{
+  @include gradient-vertical($app-clr-lightgray, darken($app-clr-lightgray, 5%), 85%, 100%);
+  @include box-shadow(0 0 5px rgba(0,0,0,.2));
+  padding: 0;
+  background-color: $app-clr-lightgray;
+  border: 1px solid darken($app-clr-lightgray, 20%);
+}
 .block-heading{
   margin-bottom: 20px;
   padding: 0 0 4px 0;
@@ -82,6 +89,22 @@ body{
   background-image: image-url('bg_pattern_trans.png');
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: none;
+}
+
+// Forms
+// -------------------------
+::-webkit-input-placeholder{
+  color: darken($app-clr-white, 20%) !important;
+  font-weight: 200;
+}
+:-moz-placeholder{
+  font-weight: 200;
+}
+::-moz-placeholder{
+  font-weight: 200;
+}
+:-ms-input-placeholder{
+  font-weight: 200;
 }
 
 // Lists
@@ -164,12 +187,7 @@ ul{
 // Page
 // -------------------------
 #page{
-  @include gradient-vertical($app-clr-lightgray, darken($app-clr-lightgray, 5%), 80%, 100%);
-  @include box-shadow(0 0 5px rgba(0,0,0,.2));
-
-  padding: 0;
-  background-color: $app-clr-lightgray;
-  border: 1px solid darken($app-clr-lightgray, 20%);
+  @extend .block-box;
 }
 
 // Navigation
@@ -218,7 +236,7 @@ ul{
       padding-top: 18px;
       color: $app-clr-darkblue;
       background-color: $app-clr-lightgray;
-      @include gradient-vertical(darken($app-clr-lightgray, 5%), $app-clr-lightgray, 0%, 15%);
+      @include gradient-vertical(darken($app-clr-lightgray, 8%), $app-clr-lightgray, 0%, 12%);
       border: 1px solid darken($app-clr-lightgray, 10%);
       border-bottom: 0 none;
       @include border-top-radius(4px);
@@ -350,6 +368,11 @@ ul{
     }
   }
 
+  #contact-form{
+    .fulltext{
+      min-height: 100px;
+    }
+  }
 }
 
 

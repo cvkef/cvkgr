@@ -29,3 +29,41 @@ div.row
     hr.block-divider.visible-xs
 
     h3.block-heading = I18n.t('contact.leave_message')
+
+    div.alert.alert-dismissable.fade.in.hidden
+      button.close type='button' data-dismiss='alert' aria-hidden='true' &times;
+      p.alert-content
+
+    - form_tag 'message.php', id: 'contact-form', method: :post
+
+      / name
+      div.form-group
+        = label_tag       :name
+        = text_field_tag  :name,           id: :name,
+                                        class: 'form-control required text',
+                                  placeholder: I18n.t('contact.placeholder.name'),
+                                        value: req.params[:name]
+        span.help-block.hidden = I18n.t('contact.hint.name')
+
+      / email
+      div.form-group
+        = label_tag       :email
+        = text_field_tag  :email,          id: :email,
+                                        class: 'form-control required email',
+                                  placeholder: I18n.t('contact.placeholder.email'),
+                                        value: req.params[:email]
+        span.help-block.hidden = I18n.t('contact.hint.email')
+
+      / message
+      div.form-group
+        = label_tag       :message
+        = text_area_tag   :message,        id: :message,
+                                        class: 'form-control required fulltext',
+                                  placeholder: I18n.t('contact.placeholder.message'),
+                                        value: req.params[:message]
+        span.help-block.hidden = I18n.t('contact.hint.message')
+
+      / submit
+      div.form-group
+        button#contact-submit-btn.btn.btn-block.btn-primary type='submit' data-reset="#{I18n.t('contact.label.submit')}" data-sending="#{I18n.t('contact.label.sending')}"
+          = I18n.t('contact.label.submit')
