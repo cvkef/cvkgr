@@ -49,11 +49,28 @@ $.fn.resetForm = function ()
 {
   var $form = $(this);
 
-  $(this).find('.form-group').removeClass('has-error');
+  $form.find('.form-group').removeClass('has-error');
+  $form.find('.form-control').val('');
   $form.buttonState('reset');
+
+  $('.alert').hide();
 
   return $(this);
 };
+
+// scroll to alert
+$.fn.scrollToAlert = function ()
+{
+  var $first = $('.alert:first');
+  var offset = ($first.length > 0) ? ($first.offset().top - 10) : 0;
+  $('html, body').animate(
+    {
+      scrollTop: offset
+    }, 350
+  );
+
+  return $(this);
+}
 
 // scroll to first error
 $.fn.scrollToError = function ()
@@ -168,6 +185,8 @@ $.fn.submitForm = function ()
   $formData = $form.serialize();
   url = $form.attr('action');
 
+  $('.alert').hide();
+
   $.ajax(
       {
         url:    url,
@@ -180,12 +199,31 @@ $.fn.submitForm = function ()
       function (data, textStatus, jqXHR)
       {
         console.log(data);
+
+        $form.scrollToAlert();
+        switch (data.message)
+        {
+          case 'invalid_data':
+            $('[data-alert-for="invalid_data"]').removeClass('hidden').fadeIn(250);
+            break;
+
+          case 'message_not_delivered':
+          default:
+            $('[data-alert-for="message_not_delivered"]').removeClass('hidden').fadeIn(250);
+            break;
+
+          case 'message_delivered':
+            $('[data-alert-for="message_delivered"]').removeClass('hidden').fadeIn(250);
+            break;
+        }
       }
     )
     .fail(
       function (jqXHR, textStatus, errorThrown)
       {
         console.log(errorThrown);
+        $('.alert').hide();
+        $('[data-alert-for="message_not_delivered"]').removeClass('hidden').fadeIn(250);
       }
     )
     .always(

@@ -44,6 +44,10 @@ en:
       name: 'Please enter your Name. At least 2 characters.'
       email: 'Please enter a valid email address. e.g. <em>john_doe@example.com</em>.'
       message: 'Please enter your inquiry.'
+    message:
+      invalid_data: 'Please check again your contact details.'
+      message_not_delivered: 'Ops! Something went wrong! Please try to send your message again.'
+      message_delivered: 'Thank you for your interest! I will respond to your inquiry as soon as possible.'
 
   vcard: 'vCard'
   click_for: 'click for'

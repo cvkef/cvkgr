@@ -30,9 +30,18 @@ div.row
 
     h3.block-heading = I18n.t('contact.leave_message')
 
-    div.alert.alert-dismissable.fade.in.hidden
+    / alerts
+    div.alert.alert-danger.alert-dismissable.fade.in.hidden data-alert-for='invalid_data'
       button.close type='button' data-dismiss='alert' aria-hidden='true' &times;
-      p.alert-content
+      p.alert-content = I18n.t('contact.message.invalid_data')
+
+    div.alert.alert-danger.alert-dismissable.fade.in.hidden data-alert-for='message_not_delivered'
+      button.close type='button' data-dismiss='alert' aria-hidden='true' &times;
+      p.alert-content = I18n.t('contact.message.message_not_delivered')
+
+    div.alert.alert-success.alert-dismissable.fade.in.hidden data-alert-for='message_delivered'
+      button.close type='button' data-dismiss='alert' aria-hidden='true' &times;
+      p.alert-content = I18n.t('contact.message.message_delivered')
 
     - form_tag 'message.php', id: 'contact-form', method: :post
 
