@@ -201,7 +201,14 @@ $.fn.submitForm = function ()
     .done(
       function (data, textStatus, jqXHR)
       {
-        data = $.parseJSON(data);
+        try
+        {
+          data = $.parseJSON(data);
+        }
+        catch (e)
+        {
+          data.textMessage = 'invalid_data';
+        }
 
         switch (data.textMessage)
         {
