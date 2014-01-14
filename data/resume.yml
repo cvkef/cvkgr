@@ -1,0 +1,53 @@
+---
+education:
+  - {
+      title:        'msc_elearning_systems',
+      institution:  'unipi',
+      thesis:       'interactive_edu_activities',
+      start_m:      'oct',
+      start_y:      '2008',
+      end_m:        'may',
+      end_y:        '2010'
+    }
+  - {
+      title:        'bsc_digital_systems',
+      institution:  'unipi',
+      thesis:       'syco',
+      start_m:      '',
+      start_y:      '',
+      end_m:        'oct',
+      end_y:        '2008'
+    }
+
+
+experience:
+  - {
+      position:     'msc_elearning_systems',
+      company:      'unipi',
+      repsonsibilities:
+        [
+          'kinems_client',
+          'kinems_backend',
+          'kinems_website'
+        ],
+      technologies:
+        [
+          'ruby',
+          'rubyonrails',
+          'javascript',
+          'html5',
+          'css3',
+          'air'
+        ],
+      contact:
+        {
+          person:   'mikebolou',
+          website:  'http://www.kinems.com/',
+          email:    'michalis@kinems.com',
+          phone:    '0031.6.1552.9236'
+        },
+      start_m:      'jan',
+      start_y:      '2013',
+      end_m:        'dec',
+      end_y:        '2013'
+    }
