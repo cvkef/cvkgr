@@ -142,12 +142,20 @@ ul{
 #header{
 
   #logo{
-    h1{
+    margin-bottom: 15px;
+
+    .title{
       margin: 0;
       padding: 0;
-      @media (max-width: $screen-xs-max) {
-        margin-bottom: 15px;
-      }
+    }
+
+    .subtitle{
+      margin: 0;
+      padding: 5px 1px;
+      font-size: 13px;
+      font-weight: 300;
+      text-transform: uppercase;
+      text-shadow: 0 2px 2px rgba(255,255,255,.5);
     }
   }
 }
