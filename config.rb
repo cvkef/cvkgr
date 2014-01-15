@@ -7,7 +7,7 @@ set :slim, pretty: true
 
 # Localization
 activate :i18n, langs: [:en]
-
+I18n.enforce_available_locales = false
 
 # Pretty URLs
 #activate :directory_indexes
