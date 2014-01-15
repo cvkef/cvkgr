@@ -1,23 +1,22 @@
 ---
-education:
-  # MSc
-  - {
-      title:        'msc_elearning_systems',
-      institution:  'unipi',
-      thesis:       'interactive_edu_activities',
-      start_m:      'oct',
-      start_y:      '2008',
-      end_m:        'may',
-      end_y:        '2010'
-    }
+# MSc
+- {
+    title:        'msc_elearning_systems',
+    institution:  'unipi',
+    thesis:       'interactive_edu_activities',
+    start_m:      'oct',
+    start_y:      '2008',
+    end_m:        'may',
+    end_y:        '2010'
+  }
 
-  # BSc
-  - {
-      title:        'bsc_digital_systems',
-      institution:  'unipi',
-      thesis:       'syco',
-      start_m:      '',
-      start_y:      '',
-      end_m:        'oct',
-      end_y:        '2008'
-    }
+# BSc
+- {
+    title:        'bsc_digital_systems',
+    institution:  'unipi',
+    thesis:       'syco',
+    start_m:      '',
+    start_y:      '',
+    end_m:        'oct',
+    end_y:        '2008'
+  }

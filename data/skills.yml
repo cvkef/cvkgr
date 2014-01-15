@@ -1,0 +1,44 @@
+---
+# Programming
+- programming:
+  - php
+  - ruby
+  - javascript
+  - html5
+  - css3
+  - as3
+  - sql
+  - xml
+
+# Web Servers
+- web_servers:
+  - apache
+  - nginx
+
+# DB
+- db:
+  - mysql
+  - postgresql
+
+# Frameworks
+- frameworks:
+  - rubyonrails
+  - jquery
+  - bootstrap
+  - joomla
+  - drupal
+  - moodle
+  - netvolution
+  - git
+  - sublimetext
+  - flash_pro
+  - air
+  - photoshop
+  - illustrator
+  - msoffice
+
+# OS
+- os:
+  - macosx
+  - linux
+  - windows

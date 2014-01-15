@@ -10,6 +10,10 @@ en:
     resume: 'Resume'
     contact: 'Contact'
 
+  vcard: 'vCard'
+  click_for: 'click for'
+  close: 'close'
+
   profile:
     text:
       name:     'Name'
@@ -49,9 +53,29 @@ en:
       message_not_delivered: 'Ops! Something went wrong! Please try to send your message again.'
       message_delivered: 'Thank you for your interest! I will respond to your inquiry as soon as possible.'
 
-  vcard: 'vCard'
-  click_for: 'click for'
-  close: 'close'
+  month:
+    jan: 'Jan'
+    feb: 'Feb'
+    mar: 'Mar'
+    apr: 'Apr'
+    may: 'May'
+    jun: 'Jun'
+    jul: 'Jul'
+    aug: 'Aug'
+    sep: 'Sep'
+    oct: 'Oct'
+    nov: 'Nov'
+    dec: 'Dec'
+    tod: 'Today'
+
+  education:
+    education_text: 'Education'
+    unipi: 'University of Piraeus'
+    thesis: 'Thesis'
+    msc_elearning_systems: 'MSc in E-Learning Systems'
+    interactive_edu_activities: 'Interactive educational activities for Environmental Protection'
+    bsc_digital_systems: 'BSc in Digital Systems & Technology Education'
+    syco: 'Implementation of a distributed software architecture for a web-based tool to create concept maps in real time'
 
 
   footer:

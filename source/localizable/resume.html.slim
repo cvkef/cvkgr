@@ -1,3 +1,25 @@
 ---
 title: 'titles.resume'
 ---
+
+div.row
+
+  div.col-xs-12
+    / Education
+    - data.education.each do |e|
+      = I18n.t("education.#{e.title}")
+
+  div.col-xs-12
+    / Experience
+    - data.experience.each do |x|
+      = x.company
+
+  div.col-xs-12
+    / Skills
+    - data.education.each do |s|
+      = s
+
+  div.col-xs-12
+    / R&D
+    - data.research.each do |p|
+      = p.title_short

@@ -1,0 +1,16 @@
+---
+# SyCo
+- {
+    author:   'keflazret',
+    title:    'syco_title',
+    details:  'syco_details',
+    url:      'syco_url'
+  }
+
+# CoolMap
+- {
+    author:   'keflazret',
+    title:    'coolmap_title',
+    details:  'coolmap_details',
+    url:      'coolmap_url'
+  }

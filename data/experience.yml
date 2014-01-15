@@ -1,0 +1,220 @@
+---
+# Kinems
+- {
+    position:
+      [
+        'software_engineer',
+        'web_developer'
+      ],
+    company:      'kinems',
+    location:     'marousi',
+    repsonsibilities:
+      [
+        'kinems_client',
+        'kinems_backend',
+        'kinems_website'
+      ],
+    technologies:
+      [
+        'ruby',
+        'rubyonrails',
+        'javascript',
+        'html5',
+        'css3',
+        'air'
+      ],
+    contact:
+      {
+        person:   'mikebolou',
+        website:  'http://www.kinems.com/',
+        email:    'michalis@kinems.com',
+        phone:    '0031.6.1552.9236'
+      },
+    start_m:      'jan',
+    start_y:      '2013',
+    end_m:        'dec',
+    end_y:        '2013'
+  }
+
+# Army
+- {
+    position:
+      [
+        'web_developer'
+      ],
+    company:      'hellenic_army',
+    location:     'athens',
+    repsonsibilities:
+      [
+        'army_census',
+        'army_website',
+        'army_www',
+        'army_moodle'
+      ],
+    technologies:
+      [
+        'php',
+        'mysql',
+        'javascript',
+        'html',
+        'css'
+      ],
+    contact:
+      {
+        person:   'akats',
+        website:  'http://www.army.gr/',
+        email:    'upon_request',
+        phone:    'upon_request'
+      },
+    start_m:      'sep',
+    start_y:      '2011',
+    end_m:        'jun',
+    end_y:        '2012'
+  }
+
+# ITisART.Ltd
+- {
+    position:
+      [
+        'software_engineer',
+        'web_developer'
+      ],
+    company:      'itisart',
+    location:     'piraeus',
+    repsonsibilities:
+      [
+        'itisart_rnd',
+        'itisart_elearning'
+      ],
+    technologies:
+      [
+        'php',
+        'mysql',
+        'javascript',
+        'html',
+        'css',
+        'flash',
+        'as3'
+      ],
+    contact:
+      {
+        person:   'arapoglou',
+        website:  'http://www.itisart.com.gr/',
+        email:    'yiannis@wideservices.gr',
+        phone:    '0030.693.2273.735'
+      },
+    start_m:      'jan',
+    start_y:      '2009',
+    end_m:        'jan',
+    end_y:        '2013'
+  }
+
+# CoSyLLab
+- {
+    position:
+      [
+        'researcher',
+        'web_developer'
+      ],
+    company:      'cosyllab',
+    location:     'piraeus',
+    repsonsibilities:
+      [
+        'cosyllab_projects',
+        'cosyllab_assistant',
+        'cosyllab_rnd',
+        'cosyllab_webservices',
+        'cosyllab_admin'
+      ],
+    technologies:
+      [
+        'php',
+        'mysql',
+        'javascript',
+        'html',
+        'css',
+        'flash',
+        'as3'
+      ],
+    contact:
+      {
+        person:   'retal',
+        website:  'http://www.cosy.ds.unipi.gr/',
+        email:    'retal@unipi.gr',
+        phone:    '0030.210.4142.765'
+      },
+    start_m:      'oct',
+    start_y:      '2007',
+    end_m:        'dec',
+    end_y:        '2013'
+  }
+
+# CvK
+- {
+    position:
+      [
+        'web_developer'
+      ],
+    company:      'cvk',
+    location:     'athens',
+    repsonsibilities:
+      [
+        'cvk_freelancer'
+      ],
+    technologies:
+      [
+        'ruby',
+        'rubyonrails',
+        'php',
+        'mysql',
+        'javascript',
+        'html5',
+        'css3',
+        'air',
+        'as3'
+      ],
+    contact:
+      {
+        person:   'cvk',
+        website:  'http://www.cvk.gr/',
+        email:    'valantis@cvk.gr',
+        phone:    '0030.693.7755.766'
+      },
+    start_m:      'sep',
+    start_y:      '2007',
+    end_m:        'today',
+    end_y:        ''
+  }
+
+# Noumenia
+- {
+    position:
+      [
+        'web_developer_practice'
+      ],
+    company:      'noumenia',
+    location:     'agparaskevi',
+    repsonsibilities:
+      [
+        'noumenia_erp'
+      ],
+    technologies:
+      [
+        'php',
+        'mysql',
+        'javascript',
+        'html',
+        'css'
+      ],
+    contact:
+      {
+        person:   'michelinakis',
+        website:  'http://www.noumenia.gr/',
+        email:    'mail@noumenia.gr',
+        phone:    '0030.210.67.79.657'
+      },
+    start_m:      'jun',
+    start_y:      '2007',
+    end_m:        'sep',
+    end_y:        '2007'
+  }
