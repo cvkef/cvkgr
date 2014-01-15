@@ -1,0 +1,12 @@
+div.block-resume-cat.row.clearfix
+
+  div.col-xs-12.col-sm-12.col-md-12
+    h4.subtitle
+      = "#{I18n.t('pub.'+d.author)}"
+    h3.title-2.text-size-normal.text-weight-normal
+      a href="http://#{d.url}" target="_blank"
+        = "#{I18n.t('pub.'+d.title)}"
+
+    div
+      span.text-muted
+        = "#{I18n.t('pub.'+d.details)}"

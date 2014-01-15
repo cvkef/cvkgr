@@ -1,0 +1,20 @@
+div.block-resume-cat.row.clearfix
+  / Title Description
+  div.col-xs-12.col-sm-12.col-md-9
+    h3.title
+      = "#{I18n.t('edu.'+d.title)}"
+    h4.subtitle
+      = "#{I18n.t('edu.'+d.institution)}"
+
+  / Duration Dates
+  div.col-xs-12.col-sm-12.col-md-3
+    h4.date-title.left-text-xs.left-text-sm
+      = duration_date d.start_m, d.start_y, d.end_m, d.end_y
+
+
+  / Thesis
+  div.col-xs-12.col-sm-12.col-md-9
+    h5.inline-title
+      = I18n.t('edu.thesis')
+    div
+      = "#{I18n.t('edu.'+d.thesis)}"

@@ -1,0 +1,33 @@
+div.block-resume-cat.row.clearfix
+  / Job Description
+  div.col-xs-12.col-sm-12.col-md-9
+    h3.title
+      = d.position.map { |str| "#{I18n.t('xp.'+str)}" }.join(', ')
+    h4.subtitle
+      = "#{I18n.t('xp.'+d.company)}, #{I18n.t('location.'+d.location)}"
+
+  / Duration Dates
+  div.col-xs-12.col-sm-12.col-md-3
+    h4.date-title.left-text-xs.left-text-sm
+      = duration_date d.start_m, d.start_y, d.end_m, d.end_y
+
+  / Responsibilities, Technologies, Contact
+  div.col-xs-12.col-sm-12.col-md-9
+    / Responsibilities
+    h5.inline-title
+      = I18n.t('xp.responsibilies')
+    ul.default-list
+      - d.responsibilities.each do |r|
+        li = "#{I18n.t('xp.'+r)}"
+
+    / Technologies
+    h5.inline-title
+      = I18n.t('xp.technologies')
+    div
+      = d.technologies.map { |str| "#{I18n.t(str)}" }.join(', ')
+
+    / Contact
+    h5.inline-title
+      = I18n.t('xp.contact')
+    div
+      = contact_person d.contact

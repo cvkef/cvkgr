@@ -1,0 +1,7 @@
+div.block-resume-cat.skill
+  h3.block-heading
+    = I18n.t(d.title)
+
+  ul.default-list
+    - d.skills.each do |s|
+      li = I18n.t(s)

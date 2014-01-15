@@ -1,0 +1,13 @@
+div.block-resume-cat.row.clearfix
+
+  div.col-xs-12.col-sm-12.col-md-12
+    h3.title-2
+      = "#{I18n.t('rnd.'+d.title_short)}"
+    h4.subtitle
+      = "#{I18n.t('rnd.'+d.title_full)}" if d.title_full
+
+    div
+      span.text-muted
+        = "#{I18n.t('rnd.'+d.description)}, "
+      a href="http://#{d.website}" target="_blank"
+        = d.website

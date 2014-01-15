@@ -5,8 +5,9 @@ navigation:
   - { title: 'contact', icon: 'envelope' }
 
 uri:
-  gravatar: 'images/ChrisovalantisKefalidis.jpeg'
+  gravatar: './images/ChrisovalantisKefalidis.jpeg'
   gravatar_remote: 'https://s.gravatar.com/avatar/e0892d801145af3dac4ae4c24f6a0ccd'
+  cv_pdf: './files/ChrisovalantisKefalidis.20140101.pdf'
 
 cvk:
   nickname: 'cvk'
@@ -14,3 +15,13 @@ cvk:
   email:    'valantis@cvk.gr'
   phone:    '+30.693.7755.766'
   skype:    'cv_kef'
+
+skills:
+  - { skill: 'php',         level: 90 }
+  - { skill: 'mysql',       level: 90 }
+  - { skill: 'rubyonrails', level: 60 }
+  - { skill: 'html5',       level: 90 }
+  - { skill: 'css3',        level: 95 }
+  - { skill: 'javascript',  level: 95 }
+  - { skill: 'as3',         level: 80 }
+  - { skill: 'photoshop',   level: 75 }

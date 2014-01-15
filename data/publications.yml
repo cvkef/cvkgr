@@ -4,7 +4,7 @@
     author:   'keflazret',
     title:    'syco_title',
     details:  'syco_details',
-    url:      'http://dl.acm.org/citation.cfm?id=1551817'
+    url:      'dl.acm.org/citation.cfm?id=1551817'
   }
 
 # CoolMap
@@ -12,5 +12,5 @@
     author:   'keflazret',
     title:    'coolmap_title',
     details:  'coolmap_details',
-    url:      'http://www.idc09.polimi.it/'
+    url:      'www.idc09.polimi.it'
   }

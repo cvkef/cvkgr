@@ -18,6 +18,7 @@ en:
   vcard:      'vCard'
   click_for:  'click for'
   close:      'close'
+  download_pdf: 'Download C.V. as PDF'
 
   profile:
     text:
@@ -71,7 +72,7 @@ en:
     oct: 'Oct'
     nov: 'Nov'
     dec: 'Dec'
-    tod: 'Today'
+    today: 'Today'
 
   location:
     marousi:      'Marousi - Athens, Greece'
@@ -81,7 +82,7 @@ en:
 
   programming:  'Programming Languages'
   web_servers:  'Web Servers'
-  databases:    'Databases'
+  db:           'Databases'
   frameworks:   'Frameworks, Platforms & Tools'
   os:           'Operating Systems'
   ruby:         'Ruby'
@@ -141,7 +142,7 @@ en:
     kinems_website: 'Development of www.kinems.com'
     mikebolou:      'Michael Boloudakis'
 
-    hellenic_army:  'Army Duty at Centre of IT Support of the Hellenic Army (KEPYES)'
+    army:           'Army Duty at Centre of IT Support of the Hellenic Army (KEPYES)'
     army_census:    'Design & Development of an integrated online system for Hellenic National Defense General Staff census'
     army_website:   'Development, Administration, Support & Maintenance of www.army.gr'
     army_www:       'Training of Hellenic Army Officers in the field of WWW Programming'
@@ -153,7 +154,7 @@ en:
     itisart_elearning:  'Development of customized e-learning solutions'
     arapoglou:          'John Arapoglou'
 
-    cosyllab:             'CosyLlab – University of Piraeus'
+    cosyllab:             "CosyLLab - University of Piraeus"
     cosyllab_projects:    'Project Management of EU funded projects'
     cosyllab_assistant:   'Assistant teacher in laboratory courses'
     cosyllab_rnd:         'Analysis, Design & Development of CSCL and CSCW systems'
@@ -168,35 +169,35 @@ en:
     noumenia_erp: 'Development of a custom web-based ERP solution for a local wine distribution factory'
     michelinakis: 'Demetrios Michelinakis'
 
-  research:
+  rnd:
     sails_short:        'SAILS'
     sails_full:         'Strategies for Assessment of Inquiry Learning in Science'
-    sails_description:  '20/07/2012-31/12/2012'
+    sails_description:  "20/07/2012-31/12/2012"
 
     carenet_short:        'CareNet'
     carenet_full:         'Building ICT competencies in the long-term care sector to enhance quality of life for older people and those at risk of exclusion'
-    carenet_description:  '01/01/2012-31/12/2013'
+    carenet_description:  "01/01/2012-31/12/2013"
 
     lire_short:        'LiRe'
     lire_full:         'Lifelong Readers'
-    lire_description:  'EU Lifelong Learning Programme, Ref. 518250-LLP-1-2011-1-CY-COMENIUS-CMP'
+    lire_description:  "EU Lifelong Learning Programme, Ref. 518250-LLP-1-2011-1-CY-COMENIUS-CMP"
 
     safe_short:        'Safe Social Media'
     safe_full:         'Using New Media to prevent and combat against Media Violence'
-    safe_description:  'DAPHNE III, Ref. JUST/2010/DAP3/AG/1350, 14/02/2011-13/02/2013'
+    safe_description:  "DAPHNE III, Ref. JUST/2010/DAP3/AG/1350, 14/02/2011-13/02/2013"
 
     radc_short:        'RADC'
     radc_full:         'Raising awareness on development cooperation'
-    radc_description:  '02/01/2010-01/01/2012'
+    radc_description:  "02/01/2010-01/01/2012"
 
     tdp_short:        "Teachers' Design Practice"
-    tdp_description:  'Leonardo da Vinci – transfer of innovation, Ref. 2009-1-CY1-LEO05-00465, 01/10/2009-30/09/2011'
+    tdp_description:  "Leonardo da Vinci - transfer of innovation, Ref. 2009-1-CY1-LEO05-00465, 01/10/2009-30/09/2011"
 
     educomics_short:        'EduComics'
     educomics_full:         'Using Web Comics in Education'
-    educomics_description:  'LifeLong Learning Comenius, Ref. 142424-LLP-1-2008-1-GR-CMENIUS-CMP, 01/10/2008-30/09/2010'
+    educomics_description:  "LifeLong Learning Comenius, Ref. 142424-LLP-1-2008-1-GR-CMENIUS-CMP, 01/10/2008-30/09/2010"
 
-  publications:
+  pub:
     keflazret: 'Kefalidis, Chrisovalantis, Lazakidou, Georgia and Retalis, Symeon'
 
     syco_title:   'SyCo: a collaborative learning tool for generating ideas in private and in public.'

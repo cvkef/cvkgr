@@ -4,22 +4,77 @@ title: 'titles.resume'
 
 div.row
 
-  div.col-xs-12
-    / Education
-    - data.education.each do |e|
-      = I18n.t("education.#{e.title}")
+  / Tabs
+  ul.nav.nav-pills.my-nav-pills
+    li.active
+      a href='#experience' data-toggle='tab' = I18n.t('titles.experience')
+    li
+      a href='#education' data-toggle='tab' = I18n.t('titles.education')
+    li
+      a href='#research' data-toggle='tab' = I18n.t('titles.research')
+    li
+      a href='#publications' data-toggle='tab' = I18n.t('titles.publications')
+    li.visible-xs.visible-sm
+      a href='#skills' data-toggle='tab' = I18n.t('titles.skills')
 
-  div.col-xs-12
+
+  / Panes
+  div.col-xs-12.col-sm-12.col-md-9.tab-content
+
     / Experience
-    - data.experience.each do |x|
-      = x.company
+    div#experience.row.tab-pane.fade.in.active
+      h3.block-heading
+        = I18n.t('titles.experience')
+      - data.experience.each do |i|
+        = partial :experience, locals: { d: i }
 
-  div.col-xs-12
+    / Education
+    div#education.row.tab-pane.fade.in
+      h3.block-heading
+        = I18n.t('titles.education')
+      - data.education.each do |i|
+        = partial :education, locals: { d: i }
+
+    / Research
+    div#research.row.tab-pane.fade.in
+      h3.block-heading
+        = I18n.t('titles.research')
+      - data.research.each do |i|
+        = partial :research, locals: { d: i }
+
+    / Publications
+    div#publications.row.tab-pane.fade.in
+      h3.block-heading
+        = I18n.t('titles.publications')
+      - data.publications.each do |i|
+        = partial :publication, locals: { d: i }
+
     / Skills
-    - data.education.each do |s|
-      = s
+    div#skills.row.tab-pane.fade.in
+      h3.block-heading
+        = I18n.t('titles.skills')
 
-  div.col-xs-12
-    / R&D
-    - data.research.each do |p|
-      = p.title_short
+      - data.base.skills.each do |skill|
+        = partial :skill_level, locals: { d: skill }
+
+      - data.skills.each do |i|
+        = partial :skills, locals: { d: i }
+
+  / Skills Column
+  div.col-xs-12.col-sm-12.col-md-3.hidden-xs.hidden-sm
+    / Skills
+    h3.block-heading
+      = I18n.t('titles.skills')
+
+    - data.base.skills.each do |skill|
+      = partial :skill_level, locals: { d: skill }
+
+    - data.skills.each do |i|
+      = partial :skills, locals: { d: i }
+
+
+  / PDF
+  div.block-pdf-btn.col-xs-12.col-sm-12.col-md-12
+    a.btn.btn-block.btn-danger href="#{data.base.uri.cv_pdf}"
+      i.fa.fa-download.inline
+      = I18n.t('download_pdf')

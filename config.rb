@@ -73,4 +73,23 @@ helpers do
     "#{I18n.t('profile.first_name')} #{I18n.t('profile.last_name')}"
   end
 
+  # Duration Date
+  def duration_date(m1, y1, m2, y2)
+    html  = ""
+    html += "#{I18n.t('month.'+m1)}" if m1 != ''
+    html += " #{y1} - " if y1 != ''
+    html += "#{I18n.t('month.'+m2)}" if m2 != ''
+    html += " #{y2}" if y2 != ''
+    html
+  end
+
+  # Contact Person
+  def contact_person(contact = {})
+    html  = ""
+    html += (contact.email) == '' ? "#{I18n.t('xp.'+contact.person)}, #{I18n.t('xp.upon_request')}" : "<a href='mailto:#{contact.email}'>#{I18n.t('xp.'+contact.person)}</a>"
+    html += (contact.phone) == '' ? '' : ", <span>#{contact.phone}</span>"
+    html += ", <a href='http://#{contact.website}' target='_blank'>#{contact.website}</a>"
+    html
+  end
+
 end

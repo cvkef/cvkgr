@@ -8,7 +8,7 @@
       ],
     company:      'kinems',
     location:     'marousi',
-    repsonsibilities:
+    responsibilities:
       [
         'kinems_client',
         'kinems_backend',
@@ -26,7 +26,7 @@
     contact:
       {
         person:   'mikebolou',
-        website:  'http://www.kinems.com/',
+        website:  'www.kinems.com',
         email:    'michalis@kinems.com',
         phone:    '0031.6.1552.9236'
       },
@@ -42,9 +42,9 @@
       [
         'web_developer'
       ],
-    company:      'hellenic_army',
+    company:      'army',
     location:     'athens',
-    repsonsibilities:
+    responsibilities:
       [
         'army_census',
         'army_website',
@@ -62,9 +62,9 @@
     contact:
       {
         person:   'akats',
-        website:  'http://www.army.gr/',
-        email:    false,
-        phone:    false
+        website:  'www.army.gr',
+        email:    '',
+        phone:    ''
       },
     start_m:      'sep',
     start_y:      '2011',
@@ -81,7 +81,7 @@
       ],
     company:      'itisart',
     location:     'piraeus',
-    repsonsibilities:
+    responsibilities:
       [
         'itisart_rnd',
         'itisart_elearning'
@@ -99,7 +99,7 @@
     contact:
       {
         person:   'arapoglou',
-        website:  'http://www.itisart.com.gr/',
+        website:  'www.itisart.com.gr',
         email:    'yiannis@wideservices.gr',
         phone:    '0030.693.2273.735'
       },
@@ -118,7 +118,7 @@
       ],
     company:      'cosyllab',
     location:     'piraeus',
-    repsonsibilities:
+    responsibilities:
       [
         'cosyllab_projects',
         'cosyllab_assistant',
@@ -139,7 +139,7 @@
     contact:
       {
         person:   'retal',
-        website:  'http://www.cosy.ds.unipi.gr/',
+        website:  'www.cosy.ds.unipi.gr',
         email:    'retal@unipi.gr',
         phone:    '0030.210.4142.765'
       },
@@ -157,7 +157,7 @@
       ],
     company:      'cvk',
     location:     'athens',
-    repsonsibilities:
+    responsibilities:
       [
         'cvk_freelancer'
       ],
@@ -176,7 +176,7 @@
     contact:
       {
         person:   'cvk',
-        website:  'http://www.cvk.gr/',
+        website:  'www.cvk.gr',
         email:    'valantis@cvk.gr',
         phone:    '0030.693.7755.766'
       },
@@ -194,7 +194,7 @@
       ],
     company:      'noumenia',
     location:     'agparaskevi',
-    repsonsibilities:
+    responsibilities:
       [
         'noumenia_erp'
       ],
@@ -209,7 +209,7 @@
     contact:
       {
         person:   'michelinakis',
-        website:  'http://www.noumenia.gr/',
+        website:  'www.noumenia.gr',
         email:    'mail@noumenia.gr',
         phone:    '0030.210.67.79.657'
       },
