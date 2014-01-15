@@ -1,18 +1,22 @@
 ---
 en:
   titles:
-    welcome: 'Welcome'
-    resume: 'Resume'
-    contact: 'Contact'
+    welcome:      'Welcome'
+    resume:       'Resume'
+    contact:      'Contact'
+    education:    'Education'
+    experience:   'Experience'
+    skills:       'Skills'
+    publications: 'Publications'
 
   navigation:
-    index: 'Profile'
-    resume: 'Resume'
-    contact: 'Contact'
+    index:    'Profile'
+    resume:   'Resume'
+    contact:  'Contact'
 
-  vcard: 'vCard'
-  click_for: 'click for'
-  close: 'close'
+  vcard:      'vCard'
+  click_for:  'click for'
+  close:      'close'
 
   profile:
     text:
@@ -29,29 +33,29 @@ en:
     job_title:  'Software Engineer | Web Developer'
     birthday:   '30 October 1984'
     address:    'P. Faliron, 17561, Greece'
-    about:      "I'm a freelancer web developer based in Athens, Greece, and my passion is to bring into life clean, simple and sophisticated user experiences."
+    about:      "I'm a freelancer web developer based in Athens, Greece and my passion is to bring into life clean, simple and sophisticated user experiences."
 
   contact:
-    contact_info: 'Contact Info'
-    leave_message: 'Leave me a message'
+    contact_info:   'Contact Info'
+    leave_message:  'Leave me a message'
     label:
-      name: 'Name'
-      email: 'Email'
-      message: 'Message'
-      submit: 'Submit Message'
-      sending: 'Sending Message...'
+      name:     'Name'
+      email:    'Email'
+      message:  'Message'
+      submit:   'Submit Message'
+      sending:  'Sending Message...'
     placeholder:
-      name: 'Enter your Name'
-      email: 'Enter your Email'
-      message: 'Enter your Message'
+      name:     'Enter your Name'
+      email:    'Enter your Email'
+      message:  'Enter your Message'
     hint:
-      name: 'Please enter your Name. At least 2 characters.'
-      email: 'Please enter a valid email address. e.g. <em>john_doe@example.com</em>.'
-      message: 'Please enter your inquiry.'
+      name:     'Please enter your Name. At least 2 characters.'
+      email:    'Please enter a valid email address. e.g. <em>john_doe@example.com</em>.'
+      message:  'Please enter your inquiry.'
     message:
-      invalid_data: 'Please check again your contact details.'
-      message_not_delivered: 'Ops! Something went wrong! Please try to send your message again.'
-      message_delivered: 'Thank you for your interest! I will respond to your inquiry as soon as possible.'
+      invalid_data:           'Please check again your contact details.'
+      message_not_delivered:  'Ops! Something went wrong! Please try to send your message again.'
+      message_delivered:      'Thank you for your interest! I will respond to your inquiry as soon as possible.'
 
   month:
     jan: 'Jan'
@@ -68,15 +72,137 @@ en:
     dec: 'Dec'
     tod: 'Today'
 
-  education:
-    education_text: 'Education'
-    unipi: 'University of Piraeus'
-    thesis: 'Thesis'
-    msc_elearning_systems: 'MSc in E-Learning Systems'
-    interactive_edu_activities: 'Interactive educational activities for Environmental Protection'
-    bsc_digital_systems: 'BSc in Digital Systems & Technology Education'
-    syco: 'Implementation of a distributed software architecture for a web-based tool to create concept maps in real time'
+  location:
+    marousi:      'Marousi - Athens, Greece'
+    athens:       'Athens, Greece'
+    piraeus:      'Piraeus, Greece'
+    agparaskevi:  'Ag. Paraskevi, Greece'
 
+  programming:  'Programming Languages'
+  web_servers:  'Web Servers'
+  databases:    'Databases'
+  frameworks:   'Frameworks, Platforms & Tools'
+  os:           'Operating Systems'
+  ruby:         'Ruby'
+  rubyonrails:  'Ruby On Rails'
+  php:          'PHP'
+  mysql:        'MySQL'
+  javascript:   'Javascript'
+  html:         'HTML'
+  html5:        'HTML5'
+  css:          'CSS'
+  css3:         'CSS3'
+  air:          'Adobe AIR'
+  flash:        'Adobe Flash'
+  as3:          'ActionScript 3.0'
+  xml:          'XML, XML Schema, XQuery, XSLT'
+  apache:       'Apache Web Server'
+  nginx:        'nginx'
+  postgresql:   'PostgreSQL'
+  jquery:       'jQuery'
+  joomla:       'Joomla!'
+  bootstrap:    'Bootstrap'
+  drupal:       'Drupal'
+  moodle:       'Moodle'
+  netvolution:  'Netvolution'
+  git:          'Git'
+  sublimetext:  'Sublime Text'
+  flash_pro:    'Adobe Flash Professional'
+  photoshop:    'Adobe Photoshop'
+  illustrator:  'Adobe Illustrator'
+  msoffice:     'Microsoft Office'
+  macosx:       'Mac OS X'
+  linux:        'Linux (Red Hat, Fedora)'
+  windows:      'Windows'
+
+  edu:
+    unipi:                      'University of Piraeus'
+    thesis:                     'Thesis'
+    msc_elearning_systems:      'MSc in E-Learning Systems'
+    interactive_edu_activities: 'Interactive educational activities for Environmental Protection'
+    bsc_digital_systems:        'BSc in Digital Systems & Technology Education'
+    syco:                       'Implementation of a distributed software architecture for a web-based tool to create concept maps in real time'
+
+  xp:
+    software_engineer:      'Software Engineer'
+    web_developer:          'Web Developer'
+    web_developer_practice: 'Practice as Web Developer'
+    researcher:             'Researcher'
+
+    responsibilies:         'Responsibilities'
+    technologies:           'Technologies'
+    contact:                'Contact'
+    upon_request:           'contact info upon request'
+
+    kinems:         'Kinems LLC'
+    kinems_client:  'Design & Development of Windows client application for Kinems platform'
+    kinems_backend: 'Design & Development of backend systems for Kinems platform'
+    kinems_website: 'Development of www.kinems.com'
+    mikebolou:      'Michael Boloudakis'
+
+    hellenic_army:  'Army Duty at Centre of IT Support of the Hellenic Army (KEPYES)'
+    army_census:    'Design & Development of an integrated online system for Hellenic National Defense General Staff census'
+    army_website:   'Development, Administration, Support & Maintenance of www.army.gr'
+    army_www:       'Training of Hellenic Army Officers in the field of WWW Programming'
+    army_moodle:    'Support of the Multilateral Interoperability Program Certification e-learning platform'
+    akats:          'Colonel (RI) Antonios Katsigiannis'
+
+    itisart:            'ITisART.Ltd'
+    itisart_rnd:        'Design & Development of websites and web applications'
+    itisart_elearning:  'Development of customized e-learning solutions'
+    arapoglou:          'John Arapoglou'
+
+    cosyllab:             'CosyLlab – University of Piraeus'
+    cosyllab_projects:    'Project Management of EU funded projects'
+    cosyllab_assistant:   'Assistant teacher in laboratory courses'
+    cosyllab_rnd:         'Analysis, Design & Development of CSCL and CSCW systems'
+    cosyllab_webservices: 'Web Services'
+    cosyllab_admin:       'Basic system administering'
+    retal:                'Dr. Symeon Retalis'
+
+    cvk:            'Chrisovalantis Kefalidis'
+    cvk_freelancer: 'Freelancer, www.cvk.gr'
+
+    noumenia:     'Noumenia'
+    noumenia_erp: 'Development of a custom web-based ERP solution for a local wine distribution factory'
+    michelinakis: 'Demetrios Michelinakis'
+
+  research:
+    sails_short:        'SAILS'
+    sails_full:         'Strategies for Assessment of Inquiry Learning in Science'
+    sails_description:  '20/07/2012-31/12/2012'
+
+    carenet_short:        'CareNet'
+    carenet_full:         'Building ICT competencies in the long-term care sector to enhance quality of life for older people and those at risk of exclusion'
+    carenet_description:  '01/01/2012-31/12/2013'
+
+    lire_short:        'LiRe'
+    lire_full:         'Lifelong Readers'
+    lire_description:  'EU Lifelong Learning Programme, Ref. 518250-LLP-1-2011-1-CY-COMENIUS-CMP'
+
+    safe_short:        'Safe Social Media'
+    safe_full:         'Using New Media to prevent and combat against Media Violence'
+    safe_description:  'DAPHNE III, Ref. JUST/2010/DAP3/AG/1350, 14/02/2011-13/02/2013'
+
+    radc_short:        'RADC'
+    radc_full:         'Raising awareness on development cooperation'
+    radc_description:  '02/01/2010-01/01/2012'
+
+    tdp_short:        "Teachers' Design Practice"
+    tdp_description:  'Leonardo da Vinci – transfer of innovation, Ref. 2009-1-CY1-LEO05-00465, 01/10/2009-30/09/2011'
+
+    educomics_short:        'EduComics'
+    educomics_full:         'Using Web Comics in Education'
+    educomics_description:  'LifeLong Learning Comenius, Ref. 142424-LLP-1-2008-1-GR-CMENIUS-CMP, 01/10/2008-30/09/2010'
+
+  publications:
+    keflazret: 'Kefalidis, Chrisovalantis, Lazakidou, Georgia and Retalis, Symeon'
+
+    syco_title:   'SyCo: a collaborative learning tool for generating ideas in private and in public.'
+    syco_details: 'In: Proceedings of ACM IDC09 Interaction Design and Children 2009. pp. 162-165.'
+
+    coolmap_title:    'CoolMap: The Collaborative Learning Tool for Private and Public Activation'
+    coolmap_details:  'IDC 2009, Como, Italy.'
 
   footer:
     copyright: 'Copyright &copy; 2007 Chrisovalantis Kefalidis. All rights reserved.'

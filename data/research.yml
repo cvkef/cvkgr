@@ -4,7 +4,7 @@
     title_short:  'sails_short',
     title_full:   'sails_full',
     description:  'sails_description',
-    website:      'sails_website'
+    website:      'www.sails-project.eu'
   }
 
 # CareNet
@@ -12,7 +12,7 @@
     title_short:  'carenet_short',
     title_full:   'carenet_full',
     description:  'carenet_description',
-    website:      'carenet_website'
+    website:      'www.carenetproject.eu'
   }
 
 # LiRe
@@ -20,7 +20,7 @@
     title_short:  'lire_short',
     title_full:   'lire_full',
     description:  'lire_description',
-    website:      'lire_website'
+    website:      'www.lifelongreaders.org'
   }
 
 # SafeSocialMedia
@@ -28,7 +28,7 @@
     title_short:  'safe_short',
     title_full:   'safe_full',
     description:  'safe_description',
-    website:      'safe_website'
+    website:      'www.safesocialmedia.org'
   }
 
 # RADC
@@ -36,15 +36,14 @@
     title_short:  'radc_short',
     title_full:   'radc_full',
     description:  'radc_description',
-    website:      'radc_website'
+    website:      'www.developmenteducation.org'
   }
 
 # TDP
 - {
     title_short:  'tdp_short',
-    title_full:   'tdp_full',
     description:  'tdp_description',
-    website:      'tdp_website'
+    website:      'www.design-practice.org'
   }
 
 # EduComics
@@ -52,5 +51,5 @@
     title_short:  'educomics_short',
     title_full:   'educomics_full',
     description:  'educomics_description',
-    website:      'educomics_website'
+    website:      'www.educomics.org'
   }

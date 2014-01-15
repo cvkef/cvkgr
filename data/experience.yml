@@ -63,8 +63,8 @@
       {
         person:   'akats',
         website:  'http://www.army.gr/',
-        email:    'upon_request',
-        phone:    'upon_request'
+        email:    false,
+        phone:    false
       },
     start_m:      'sep',
     start_y:      '2011',
