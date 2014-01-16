@@ -6,19 +6,29 @@ var Application = {};
 // Initialize
 Application.initialize = function ()
 {
-  $(document).prepareQrcode();
+  var body_class = $('body').attr('class');
+
+  // Index
+  if ( body_class.match(/\bindex\b/) )
+  {
+    $(document).prepareQrcode();
+  }
 
   // Resume
-  if ( $('body').is('.resume') )
+  else if ( body_class.match(/\bresume\b/) )
   {
     $(document).animateSkillProgress();
   }
 
   // Contact Initialization
-  if ( $('body').is('.contact') )
+  else if ( body_class.match(/\bcontact\b/) )
   {
     $(document).initializeForm();
   }
+
+  else {}
+
+  $(document).prepareBackToTop();
 
 };
 
@@ -290,7 +300,73 @@ $.fn.prepareQrcode = function ()
       $qrcodeOverlay.fadeOut(250);
     }
   );
+
+  return $(this);
 };
+
+
+/*
+    Back To Top
+*/
+$.fn.prepareBackToTop = function ()
+{
+  var $page, $back;
+
+  $page = $('#page');
+  $back = $('#back-to-top-btn');
+
+  $(window)
+    .on('resize.cvk.BackToTop', $back.positionBackToTop)
+    .on('scroll.cvk.BackToTop', $back.displayBackToTop);
+
+  $back.on('click.cvk.BackToTop',
+    function (e)
+    {
+      e.preventDefault();
+      $('html, body').animate({ scrollTop: 0 }, 350);
+    }
+  ).positionBackToTop();
+
+  return $(this);
+};
+
+$.fn.positionBackToTop = function ()
+{
+  var $page, $footer, $back, offsetX, offsetY;
+
+  $page = $('#page');
+  $footer = $('#footer');
+  $back = $('#back-to-top-btn');
+
+  offsetX = $page.offset().left + $page.width() - $back.outerWidth() + 1;
+  offsetY = $footer.height() + 26;
+
+  $back.css(
+    {
+      left:     offsetX + 'px',
+      bottom:   offsetY + 'px'
+    }
+  );
+
+  return $(this);
+};
+
+$.fn.displayBackToTop = function ()
+{
+  var $back;
+
+  $back = $('#back-to-top-btn');
+
+  if ( $(window).scrollTop() > 100 )
+  {
+    $back.fadeIn(250);
+  }
+  else
+  {
+    $back.fadeOut(250);
+  }
+}
+
 
 
 /*

@@ -572,6 +572,32 @@ ul{
   text-align: right;
 }
 
+
+// Back To Top
+// -------------------------
+#back-to-top-btn{
+  display: none;
+  margin: 0;
+  padding: 7px 6px;
+  color: $app-clr-lightgray;
+  background-color: $app-clr-darkblue;
+  opacity: 0.5;
+  //@include box-shadow(0 0 5px rgba(0,0,0,.2));
+
+  &:hover,
+  &:active{
+    opacity: 1;
+    color: $app-clr-white;
+
+    transition: all .25s linear;
+  }
+
+  position: fixed;
+  bottom: 20px;
+  left: 16px;
+}
+
+
 // Grid :: Media Queries
 // -------------------------
 .left-text-xs {
