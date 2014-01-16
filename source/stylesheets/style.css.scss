@@ -97,8 +97,8 @@ i{
   padding-left: 4px;
   padding-right: 4px;
   padding-bottom: 4px;
-  background-color: darken($app-clr-lightgray, 3%);
-  @include gradient-vertical(darken($app-clr-lightgray, 3%), darken($app-clr-lightgray, 3%), 85%, 100%);
+  background-color: $app-clr-lightgray;
+  @include gradient-vertical($app-clr-lightgray, darken($app-clr-lightgray, 3%), 85%, 100%);
   border: 1px solid darken($app-clr-lightgray, 10%);
   border-top: 0 none;
   @include border-bottom-radius(4px);
@@ -354,8 +354,8 @@ ul{
       margin-top: -7px;
       padding-top: 18px;
       color: $app-clr-darkblue;
-      background-color: darken($app-clr-lightgray, 3%);
-      @include gradient-vertical(darken($app-clr-lightgray, 8%), darken($app-clr-lightgray, 3%), 0%, 12%);
+      background-color: $app-clr-lightgray;
+      @include gradient-vertical(darken($app-clr-lightgray, 8%), $app-clr-lightgray, 0%, 12%);
       border: 1px solid darken($app-clr-lightgray, 10%);
       border-bottom: 0 none;
       @include border-top-radius(4px);
