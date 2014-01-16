@@ -97,6 +97,7 @@ en:
   air:          'Adobe AIR'
   flash:        'Adobe Flash'
   as3:          'ActionScript 3.0'
+  sql:          'SQL'
   xml:          'XML, XML Schema, XQuery, XSLT'
   apache:       'Apache Web Server'
   nginx:        'nginx'

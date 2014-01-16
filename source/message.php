@@ -31,7 +31,7 @@
     }
 
     //
-    $mail = new PHPMailer();  
+    $mail = new PHPMailer();
     $mail->IsSMTP();
     $mail->Mailer   = "smtp";
     $mail->Host     = $mail_host;
@@ -48,11 +48,14 @@
     $mail->Subject  = '[CvK] This is a copy of your message';
     $mail->WordWrap = 70;
     $mail->ContentType = 'text/html';
+    $mail->CharSet = 'UTF-8';
 
     // Email Body
     $message = <<<EOM
+<!DOCTYPE html>
 <html>
     <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <style type='text/css'>
             html{
                 color:#444444;

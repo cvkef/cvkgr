@@ -68,6 +68,10 @@ helpers do
     @page_id == '/' || @page_id == 'index.html'
   end
 
+  def homepage_logo_class
+    'hidden-xs invisible' if homepage?
+  end
+
   # Full Name
   def full_name
     "#{I18n.t('profile.first_name')} #{I18n.t('profile.last_name')}"

@@ -1,6 +1,5 @@
-div#logo.col-xs-12.col-sm-7.col-md-8.center-text-xs
-  - if !homepage?
-    h1.title
-      = full_name
-    h4.subtitle
-      = I18n.t('profile.job_title')
+div#logo class="col-xs-12 col-sm-7 col-md-8 center-text-xs #{homepage_logo_class}"
+  h1.title
+    = full_name
+  h4.subtitle
+    = I18n.t('profile.job_title')

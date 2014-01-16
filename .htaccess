@@ -1,0 +1,31 @@
+Options All -Indexes
+
+####################
+# GZIP COMPRESSION #
+####################
+SetOutputFilter DEFLATE
+AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/x-javascript application/x-httpd-php
+BrowserMatch ^Mozilla/4 gzip-only-text/html
+BrowserMatch ^Mozilla/4\.0[678] no-gzip
+BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+BrowserMatch \bMSI[E] !no-gzip !gzip-only-text/html
+SetEnvIfNoCase Request_URI \.(?:gif|jpe?g|png)$ no-gzip
+Header append Vary User-Agent env=!dont-vary
+
+####################
+# CACHING          #
+####################
+# 480 weeks
+<FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf)$">
+  Header set Cache-Control "max-age=290304000, public"
+</FilesMatch>
+ 
+# 2 DAYS
+<FilesMatch "\.(xml|txt)$">
+  Header set Cache-Control "max-age=172800, public, must-revalidate"
+</FilesMatch>
+ 
+# 2 HOURS
+<FilesMatch "\.(html|php)$">
+  Header set Cache-Control "max-age=7200, must-revalidate"
+</FilesMatch>

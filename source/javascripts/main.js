@@ -8,12 +8,32 @@ Application.initialize = function ()
 {
   $(document).prepareQrcode();
 
+  // Resume
+  if ( $('body').is('.resume') )
+  {
+    $(document).animateSkillProgress();
+  }
+
   // Contact Initialization
   if ( $('body').is('.contact') )
   {
     $(document).initializeForm();
   }
 
+};
+
+
+/*
+    Resume
+*/
+$.fn.animateSkillProgress = function ()
+{
+  $('.progress-bar-skill').each(
+    function (i)
+    {
+      $(this).delay(i*25).animate({width: $(this).data('progress')+'%'}, (250 + i*100) );
+    }
+  );
 };
 
 
