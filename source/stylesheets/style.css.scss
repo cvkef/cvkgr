@@ -375,21 +375,13 @@ ul{
 // Profile
 // -------------------------
 #gravatar{
-  position: relative;
   padding-top: 20px;
   text-align: center;
 
-  span{
-    position: relative;
-    top: 50px;
-  }
   img{
     @extend .img-circle;
     @include box-shadow(0 0 20px rgba($app-clr-darkgray,.4));
     border: 3px solid darken($app-clr-lightgray, 15%);
-
-    position: relative;
-    top: -15px;
   }
 }
 
