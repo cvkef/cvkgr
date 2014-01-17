@@ -5,6 +5,7 @@ navigation:
   - { title: 'contact', icon: 'envelope' }
 
 uri:
+  base: 'http://www.cvk.gr/'
   gravatar: './images/ChrisovalantisKefalidis.jpeg'
   gravatar_remote: 'https://s.gravatar.com/avatar/e0892d801145af3dac4ae4c24f6a0ccd'
   cv_pdf: './files/ChrisovalantisKefalidis.20140101.pdf'

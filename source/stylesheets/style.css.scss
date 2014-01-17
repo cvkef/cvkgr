@@ -351,8 +351,8 @@ ul{
     }
 
     &.active{
-      margin-top: -7px;
-      padding-top: 18px;
+      margin-top: -8px;
+      padding-top: 19px;
       color: $app-clr-darkblue;
       background-color: $app-clr-lightgray;
       @include gradient-vertical(darken($app-clr-lightgray, 8%), $app-clr-lightgray, 0%, 12%);

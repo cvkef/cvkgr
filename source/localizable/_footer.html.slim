@@ -1,2 +1,5 @@
-div#footer.row.center-text-xs.center-text-sm
-  = I18n.t('footer.copyright')
+div#footer.row
+  div.col-xs-12.col-sm-6.col-md-6.center-text-xs.text-left
+    = partial 'fb_like'
+  div.col-xs-12.col-sm-6.col-md-6.center-text-xs.text-right
+    = I18n.t('footer.copyright')

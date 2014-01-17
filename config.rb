@@ -28,8 +28,13 @@ set :js_dir, 'javascripts'
 # Images Directory
 set :images_dir, 'images'
 
+# Use relative URLs
+set :relative_links, true
+
+#set :environment, :build
+
 # Google Analytics
-use Rack::GoogleAnalytics, :web_property_id => 'UA-3312587-3'
+#use Rack::GoogleAnalytics, :web_property_id => 'UA-3312587-3'
 
 # Build-specific configuration
 configure :build do
@@ -45,7 +50,7 @@ configure :build do
   # Enable cache buster
   activate :asset_hash
 
-  # Use relative URLs
+  # Use relative Assets
   activate :relative_assets
 end
 

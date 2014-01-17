@@ -6,7 +6,13 @@ var Application = {};
 // Initialize
 Application.initialize = function ()
 {
-  var body_class = $('body').attr('class');
+  var body_class, $page;
+
+  $page = $('#page-wrapper');
+  body_class = $('body').attr('class')
+
+  // Fade In page
+  $page.addClass('in');
 
   // Index
   if ( body_class.match(/\bindex\b/) )
