@@ -20,4 +20,4 @@
 .idea
 
 # Ignore PHP config
-.config.inc.php
+config.inc.php
