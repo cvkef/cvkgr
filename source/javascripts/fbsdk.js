@@ -2,8 +2,15 @@
 $(document).ready(
   function ()
   {
-    var $fb = $('.fb-like');
-    $('.fb-like').attr('data-href', 'http:' + $fb.data('href'));
+    var http, $fb;
+
+    $fb = $('.fb-like');
+    http = $fb.data('href');
+
+    if ( http.indexOf('http:') === -1 )
+    {
+      $fb.attr('data-href', 'http:' + http);
+    }
   }
 );
 (function(d, s, id){

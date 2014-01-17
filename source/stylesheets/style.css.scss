@@ -351,8 +351,9 @@ ul{
     }
 
     &.active{
-      margin-top: -8px;
-      padding-top: 19px;
+      margin-top: -12px;
+      padding-top: 20px;
+
       color: $app-clr-darkblue;
       background-color: $app-clr-lightgray;
       @include gradient-vertical(darken($app-clr-lightgray, 8%), $app-clr-lightgray, 0%, 12%);
@@ -364,6 +365,10 @@ ul{
       }
     }
   }
+}
+.index #navigation a.active{
+  margin-top: -10px;
+  padding-top: 20px;
 }
 
 // Main
