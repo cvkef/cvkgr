@@ -1,10 +1,26 @@
 ---
+# M4ALL
+- {
+    title_short:  'm4all_short',
+    title_full:   'm4all_full',
+    description:  'm4all_description',
+    website:      'www.m4allproject.eu'
+  }
+
 # SAILS
 - {
     title_short:  'sails_short',
     title_full:   'sails_full',
     description:  'sails_description',
     website:      'www.sails-project.eu'
+  }
+
+# PREATY
+- {
+    title_short:  'preaty_short',
+    title_full:   'preaty_full',
+    description:  'preaty_description',
+    website:      'portal.ou.nl/en/web/preaty'
   }
 
 # CareNet

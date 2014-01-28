@@ -171,13 +171,21 @@ en:
     michelinakis: 'Demetrios Michelinakis'
 
   rnd:
+    m4all_short:        'M4ALL'
+    m4all_full:         'Motion-based adaptable playful learning experiences for children with motor and mental disabilities'
+    m4all_description:  "01/12/2012 - 31/12/2013"
+
     sails_short:        'SAILS'
     sails_full:         'Strategies for Assessment of Inquiry Learning in Science'
-    sails_description:  "20/07/2012-31/12/2012"
+    sails_description:  "20/07/2012 - 31/12/2012"
+
+    preaty_short:        'PREATY'
+    preaty_full:         'Proposing modern e-assessment approaches and tools to young and experienced in-service teachers'
+    preaty_description:  "01/04/2013 - 31/12/2013"
 
     carenet_short:        'CareNet'
     carenet_full:         'Building ICT competencies in the long-term care sector to enhance quality of life for older people and those at risk of exclusion'
-    carenet_description:  "01/01/2012-31/12/2013"
+    carenet_description:  "01/01/2012 - 31/12/2013"
 
     lire_short:        'LiRe'
     lire_full:         'Lifelong Readers'
@@ -185,18 +193,18 @@ en:
 
     safe_short:        'Safe Social Media'
     safe_full:         'Using New Media to prevent and combat against Media Violence'
-    safe_description:  "DAPHNE III, Ref. JUST/2010/DAP3/AG/1350, 14/02/2011-13/02/2013"
+    safe_description:  "DAPHNE III, Ref. JUST/2010/DAP3/AG/1350, 14/02/2011 - 13/02/2013"
 
     radc_short:        'RADC'
     radc_full:         'Raising awareness on development cooperation'
-    radc_description:  "02/01/2010-01/01/2012"
+    radc_description:  "02/01/2010 - 01/01/2012"
 
     tdp_short:        "Teachers' Design Practice"
-    tdp_description:  "Leonardo da Vinci - transfer of innovation, Ref. 2009-1-CY1-LEO05-00465, 01/10/2009-30/09/2011"
+    tdp_description:  "Leonardo da Vinci - transfer of innovation, Ref. 2009-1-CY1-LEO05-00465, 01/10/2009 - 30/09/2011"
 
     educomics_short:        'EduComics'
     educomics_full:         'Using Web Comics in Education'
-    educomics_description:  "LifeLong Learning Comenius, Ref. 142424-LLP-1-2008-1-GR-CMENIUS-CMP, 01/10/2008-30/09/2010"
+    educomics_description:  "LifeLong Learning Comenius, Ref. 142424-LLP-1-2008-1-GR-CMENIUS-CMP, 01/10/2008 - 30/09/2010"
 
   pub:
     keflazret: 'Kefalidis, Chrisovalantis, Lazakidou, Georgia and Retalis, Symeon'
