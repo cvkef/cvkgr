@@ -15,7 +15,7 @@ html
 
   body class="#{page_classes}"
 
-    div#page-wrapper.container.fade
+    div#page-wrapper.container
       div#header.row
         / Logo
         = partial 'logo'
@@ -35,6 +35,8 @@ html
 
       / Back To Top
       = partial 'backtotop'
+      / Loading
+      = partial 'loading'
 
     / Resources
     = partial 'assets'

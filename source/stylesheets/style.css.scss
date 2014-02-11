@@ -440,6 +440,7 @@ ul{
 
   #qrcode-overlay{
     display: none;
+    z-index: $zindex-modal;
     position: fixed;
     top: 0;
     left: 0;
@@ -595,6 +596,18 @@ ul{
   left: 16px;
 }
 
+
+// Loading
+// -------------------------
+#loading {
+  position: fixed;
+  top: 5px;
+  right: 5px;
+
+  i {
+    font-size: 20px;
+  }
+}
 
 // Grid :: Media Queries
 // -------------------------

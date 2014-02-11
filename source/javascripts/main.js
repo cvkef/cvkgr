@@ -11,44 +11,26 @@ Application.initialize = function ()
   $page = $('#page-wrapper');
   body_class = $('body').attr('class')
 
-  // InstantClick
-  this.instantClick();
-
   // Index
   if ( body_class.match(/\bindex\b/) )
   {
     $(document).prepareQrcode();
   }
-
   // Resume
   else if ( body_class.match(/\bresume\b/) )
   {
     $(document).animateSkillProgress();
   }
-
   // Contact Initialization
   else if ( body_class.match(/\bcontact\b/) )
   {
     $(document).initializeForm();
   }
-
   else {}
 
   $(document).prepareBackToTop();
 
-};
-
-/*
-    InstantClick
-*/
-Application.instantClick = function ()
-{
-  InstantClick.on('change', function() {
-    console.log('[InstantClick] change')
-    ga('send', 'pageview', location.pathname + location.search);
-  });
-
-  InstantClick.init();
+  $('#loading').delay(250).fadeOut(250);
 };
 
 
