@@ -6,11 +6,3 @@
     details:  'syco_details',
     url:      'dl.acm.org/citation.cfm?id=1551817'
   }
-
-# CoolMap
-- {
-    author:   'keflazret',
-    title:    'coolmap_title',
-    details:  'coolmap_details',
-    url:      'www.idc09.polimi.it'
-  }
