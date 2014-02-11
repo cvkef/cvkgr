@@ -62,6 +62,12 @@ div.row
 
   / Skills Column
   div.col-xs-12.col-sm-12.col-md-3.hidden-xs.hidden-sm
+    / PDF
+    h3.block-heading
+      a.btn.btn-block.btn-danger href="#{data.base.uri.cv_pdf}"
+        i.fa.fa-download.inline
+        = I18n.t('download_pdf')
+
     / Skills
     h3.block-heading
       = I18n.t('titles.skills')
