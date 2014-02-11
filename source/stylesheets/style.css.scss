@@ -50,9 +50,17 @@ hr{
   }
 }
 i{
+  @extend .has-text-shadow;
+
   &.inline{
     margin: 0 4px;
   }
+}
+.has-text-shadow {
+  text-shadow: $app-text-shadow;
+}
+.btn {
+  @extend .has-text-shadow;
 }
 .row{
   margin-left: auto;
@@ -84,6 +92,7 @@ i{
   border: 1px solid darken($app-clr-lightgray, 20%);
 }
 .block-heading{
+  @extend .has-text-shadow;
   margin-bottom: 20px;
   padding: 0 0 4px 0;
   font-weight: 300;
@@ -254,6 +263,7 @@ ul{
 
   #logo{
     margin-bottom: 15px;
+    @extend .has-text-shadow;
 
     .title{
       margin: 0;
@@ -501,6 +511,7 @@ ul{
     text-shadow: 0 2px 2px rgba(255,255,255,.5);
   }
   .date-title{
+    @extend .has-text-shadow;
     font-size: 12px;
     font-weight: 700;
     text-align: right;
