@@ -565,6 +565,7 @@ ul{
 // -------------------------
 #footer{
   margin-top: 5px;
+  margin-bottom: 5px;
   font-size: .9em;
   text-align: right;
 }
@@ -575,7 +576,7 @@ ul{
 #back-to-top-btn{
   display: none;
   margin: 0;
-  padding: 7px 6px;
+  padding: 25px 6px;
   color: $app-clr-lightgray;
   background-color: $app-clr-darkblue;
   opacity: 0.5;

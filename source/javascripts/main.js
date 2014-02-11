@@ -345,7 +345,7 @@ $.fn.positionBackToTop = function ()
   $back = $('#back-to-top-btn');
 
   offsetX = $page.offset().left + $page.width() - $back.outerWidth() + 1;
-  offsetY = $footer.height() + 26;
+  offsetY = $footer.height() + 10;
 
   $back.css(
     {
