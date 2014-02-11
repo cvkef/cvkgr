@@ -11,8 +11,8 @@ Application.initialize = function ()
   $page = $('#page-wrapper');
   body_class = $('body').attr('class')
 
-  // Fade In page
-  $page.addClass('in');
+  // InstantClick
+  this.instantClick();
 
   // Index
   if ( body_class.match(/\bindex\b/) )
@@ -36,6 +36,19 @@ Application.initialize = function ()
 
   $(document).prepareBackToTop();
 
+};
+
+/*
+    InstantClick
+*/
+Application.instantClick = function ()
+{
+  InstantClick.on('change', function() {
+    console.log('[InstantClick] change')
+    ga('send', 'pageview', location.pathname + location.search);
+  });
+
+  InstantClick.init();
 };
 
 
