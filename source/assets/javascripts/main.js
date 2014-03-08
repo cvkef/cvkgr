@@ -58,7 +58,7 @@ $.fn.initializeForm = function ()
   var $contactForm;
 
   $contactForm = $('#contact-form');
-  $contactForm.resetForm().recaptcha()
+  $contactForm.recaptcha().resetForm()
               .on('change.cvk.ContactForm', '.form-control.required',
                 function (e)
                 {
@@ -80,6 +80,10 @@ $.fn.resetForm = function ()
 {
   var $form = $(this);
 
+  if ( typeof RecaptchaState !== 'undefined' )
+  {
+    Recaptcha.reload();
+  }
   $form.find('.form-group').removeClass('has-error');
   $form.find('.form-control').val('');
   $form.buttonState('reset').hideAlerts();
@@ -273,6 +277,7 @@ $.fn.submitForm = function ()
       function (data, textStatus, jqXHR)
       {
         $form.buttonState('reset');
+        Recaptcha.reload();
       }
     );
 };
