@@ -31,6 +31,10 @@ div.row
     h3.block-heading = I18n.t('contact.leave_message')
 
     / alerts
+    div.alert.alert-danger.alert-dismissable.fade.in.hidden data-alert-for='invalid_recaptcha'
+      /button.close type='button' data-dismiss='alert' aria-hidden='true' &times;
+      p.alert-content = I18n.t('contact.message.invalid_recaptcha')
+
     div.alert.alert-danger.alert-dismissable.fade.in.hidden data-alert-for='invalid_data'
       /button.close type='button' data-dismiss='alert' aria-hidden='true' &times;
       p.alert-content = I18n.t('contact.message.invalid_data')
@@ -71,6 +75,11 @@ div.row
                                   placeholder: I18n.t('contact.placeholder.message'),
                                         value: req.params[:message]
         span.help-block.hidden = I18n.t('contact.hint.message')
+
+      / recaptcha
+      div.form-group
+        = label_tag       I18n.t('contact.label.captcha')
+        = partial 'recaptcha'
 
       / submit
       div.form-group

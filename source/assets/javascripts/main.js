@@ -58,7 +58,7 @@ $.fn.initializeForm = function ()
   var $contactForm;
 
   $contactForm = $('#contact-form');
-  $contactForm.resetForm()
+  $contactForm.resetForm().recaptcha()
               .on('change.cvk.ContactForm', '.form-control.required',
                 function (e)
                 {
@@ -243,6 +243,10 @@ $.fn.submitForm = function ()
 
         switch (data.textMessage)
         {
+          case 'invalid_recaptcha':
+            $('[data-alert-for="invalid_recaptcha"]').removeClass('hidden').fadeIn(250, $form.scrollToAlert );
+            break;
+
           case 'invalid_data':
             $('[data-alert-for="invalid_data"]').removeClass('hidden').fadeIn(250, $form.scrollToAlert );
             break;
@@ -271,6 +275,25 @@ $.fn.submitForm = function ()
         $form.buttonState('reset');
       }
     );
+};
+
+// ReCaptcha
+$.fn.recaptcha = function ()
+{
+  var RecaptchaOptions = {
+    theme : 'custom',
+    custom_theme_widget: 'recaptcha_custom'
+  };
+
+  Recaptcha.create('6Lecou8SAAAAAEXqlDstdBqBoYd28K-W_JXsVl3N',
+    'recaptcha_custom',
+    {
+      theme: 'custom',
+      callback: null
+    }
+  );
+
+  return $(this);
 };
 
 

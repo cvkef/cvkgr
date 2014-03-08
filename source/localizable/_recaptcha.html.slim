@@ -1,0 +1,16 @@
+div#recaptcha_custom.recaptcha
+  div.recaptcha-image
+    div#recaptcha_image.pull-left
+    div.btn-group.btn-group-sm.pull-right
+      a.btn.btn-default href='javascript:Recaptcha.reload()'
+        i.fa.fa-refresh
+      a.btn.btn-default href="javascript:Recaptcha.switch_type('audio')"
+        i.fa.fa-music
+      a.btn.btn-default href="javascript:Recaptcha.switch_type('image')"
+        i.fa.fa-picture-o
+      a.btn.btn-default href='javascript:Recaptcha.showhelp()'
+        i.fa.fa-question
+
+  input#recaptcha_response_field.form-control.required type='text' name='recaptcha_response_field' placeholder="#{I18n.t('contact.placeholder.captcha')}"
+
+  span.help-block.hidden = I18n.t('contact.hint.captcha')

@@ -18,15 +18,19 @@ activate :gzip
 
 # Reload the browser automatically whenever files change
 activate :livereload
+config[:file_watcher_ignore] += [ /.idea\// ]
 
 # Stylesheets Directory
-set :css_dir, 'stylesheets'
+set :css_dir, 'assets/stylesheets'
 
 # Javascripts Directory
-set :js_dir, 'javascripts'
+set :js_dir, 'assets/javascripts'
 
 # Images Directory
-set :images_dir, 'images'
+set :images_dir, 'assets/images'
+
+# Fonts Directory
+set :fonts_dir,  'assets/fonts'
 
 # Use relative URLs
 set :relative_links, true

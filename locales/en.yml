@@ -44,18 +44,22 @@ en:
       name:     'Name'
       email:    'Email'
       message:  'Message'
+      captcha:  'In your humanity we trust!'
       submit:   'Submit Message'
       sending:  'Sending Message...'
     placeholder:
       name:     'Enter your Name'
       email:    'Enter your Email'
       message:  'Enter your Message'
+      captcha:  'Enter what you have to enter...'
     hint:
       name:     'Please enter your Name. At least 2 characters.'
       email:    'Please enter a valid email address. e.g. <em>john_doe@example.com</em>.'
       message:  'Please enter your inquiry.'
+      captcha:  'Please search deep inside you for some humanity!'
     message:
       invalid_data:           'Please check again your contact details.'
+      invalid_recaptcha:      'Please search deep inside you for some humanity!'
       message_not_delivered:  'Ops! Something went wrong! Please try to send your message again.'
       message_delivered:      'Thank you for your interest! I will respond to your inquiry as soon as possible.'
 

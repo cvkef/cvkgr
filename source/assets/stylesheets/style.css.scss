@@ -572,6 +572,31 @@ ul{
   }
 }
 
+.recaptcha{
+  .recaptcha-image{
+    width: 100%;
+    height: 60px;
+    margin-bottom: 5px;
+    background-color: $app-clr-white;
+    border:1px solid $input-border;
+  }
+
+  .btn-group{
+    margin-top: 1px;
+    margin-right: 1px;
+    .btn{
+      color: $app-clr-darkblue;
+      background-color: transparent;
+      border: 0 none;
+
+      &:hover{
+        color: $app-clr-white;
+        background-color: $app-clr-darkblue;
+      }
+    }
+  }
+}
+
 
 // Footer
 // -------------------------

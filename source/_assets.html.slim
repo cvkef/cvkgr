@@ -2,4 +2,7 @@
 = stylesheet_link_tag 'style', media: 'all'
 
 / Application JS
-= javascript_include_tag 'application', "data-no-instant" => 'true'
+= javascript_include_tag 'application'
+
+/ ReCaptcha AJAX API
+= javascript_include_tag 'http://www.google.com/recaptcha/api/js/recaptcha_ajax.js'

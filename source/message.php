@@ -1,57 +1,73 @@
 <?php
 
-    // No Direct Access
-    if ( !isset($_POST) || empty($_POST) )
-    {
-        header('Location: /');
-        exit();
-    }
+  // No Direct Access
+  if ( !isset($_POST) || empty($_POST) )
+  {
+    header('Location: /');
+    exit();
+  }
 
-    // AJAX calls only please
-    if ( isset($_SERVER['HTTP_X_REQUESTED_WITH']) && (strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) !== 'xmlhttprequest') )
-    {
-        header('Location: /');
-        exit();
-    }
+  // AJAX calls only please
+  if ( isset($_SERVER['HTTP_X_REQUESTED_WITH']) && (strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) !== 'xmlhttprequest') )
+  {
+    header('Location: /');
+    exit();
+  }
 
-    // Configuration
-    require_once('config.inc.php');
-    // PHPMailer
-    require('./phpmailer/class.phpmailer.php');
+  // Configuration
+  require_once('./lib/config/config.inc.php');
+  // ReCaptcha
+  require_once('./lib/recaptcha/recaptchalib.php');
+  // PHPMailer
+  require_once('./lib/phpmailer/class.phpmailer.php');
 
-    //
-    $name   = stripcslashes($_POST['name']);
-    $email  = stripcslashes($_POST['email']);
-    $msg    = stripcslashes($_POST['message']);
 
-    if ( (strlen($name) < 2) || !filter_var($email, FILTER_VALIDATE_EMAIL) || (strlen($msg) < 2) )
-    {
-        echo json_encode( array('status' => 'error', 'textMessage' => 'invalid_data') );
-        exit();
-    }
+  // ReCaptcha Response Verification
+  $rc = recaptcha_check_answer ($recaptcha_private_key,
+                                $_SERVER['REMOTE_ADDR'],
+                                $_POST['recaptcha_challenge_field'],
+                                $_POST['recaptcha_response_field']);
 
-    //
-    $mail = new PHPMailer();
-    $mail->IsSMTP();
-    $mail->Mailer   = "smtp";
-    $mail->Host     = $mail_host;
-    $mail->Port     = $mail_port;
-    $mail->SMTPAuth = true;
-    $mail->Username = $mail_user;
-    $mail->Password = $mail_pass;
-    
-    $mail->FromName = $mail_name;
-    $mail->From     = $mail_from;
-    $mail->AddAddress($email, $name);
-    $mail->AddCC($mail_from, $mail_name);
+  if ( !$rc->is_valid )
+  {
+    echo json_encode( array('status' => 'error', 'textMessage' => 'invalid_recaptcha') );
+    exit();
+  }
 
-    $mail->Subject  = '[CvK] This is a copy of your message';
-    $mail->WordWrap = 70;
-    $mail->ContentType = 'text/html';
-    $mail->CharSet = 'UTF-8';
 
-    // Email Body
-    $message = <<<EOM
+  // Process Message Data
+  $name   = stripcslashes($_POST['name']);
+  $email  = stripcslashes($_POST['email']);
+  $msg    = stripcslashes($_POST['message']);
+
+  if ( (strlen($name) < 2) || !filter_var($email, FILTER_VALIDATE_EMAIL) || (strlen($msg) < 2) )
+  {
+    echo json_encode( array('status' => 'error', 'textMessage' => 'invalid_data') );
+    exit();
+  }
+
+  //
+  $mail = new PHPMailer();
+  $mail->IsSMTP();
+  $mail->Mailer   = "smtp";
+  $mail->Host     = $mail_host;
+  $mail->Port     = $mail_port;
+  $mail->SMTPAuth = true;
+  $mail->Username = $mail_user;
+  $mail->Password = $mail_pass;
+
+  $mail->FromName = $mail_name;
+  $mail->From     = $mail_from;
+  $mail->AddAddress($email, $name);
+  $mail->AddCC($mail_from, $mail_name);
+
+  $mail->Subject  = '[CvK] This is a copy of your message';
+  $mail->WordWrap = 70;
+  $mail->ContentType = 'text/html';
+  $mail->CharSet = 'UTF-8';
+
+  // Email Body
+  $message = <<<EOM
 <!DOCTYPE html>
 <html>
     <head>
@@ -138,8 +154,8 @@
             
             <hr/>
 
-            <p>Thanks,</p>
-            <p>- {$mail_name}</p>
+            <p>Thank you,</p>
+            <p>{$mail_name}</p>
         </div>
         <div class="footer">
             <p>Copyright Chrisovalantis Kefalidis | <a href="http://www.cvk.gr/">www.cvk.gr</a>. All rights reserved.</p>
@@ -148,15 +164,15 @@
 </html>
 EOM;
 
-    $mail->Body = $message;
+  $mail->Body = $message;
 
-    if ( !$mail->Send() )
-    {
-      echo json_encode( array('status' => 'error', 'textMessage' => 'message_not_delivered') );
-    }
-    else
-    {
-      echo json_encode( array('status' => 'success', 'textMessage' => 'message_delivered') );
-    }
+  if ( !$mail->Send() )
+  {
+    echo json_encode( array('status' => 'error', 'textMessage' => 'message_not_delivered') );
+  }
+  else
+  {
+    echo json_encode( array('status' => 'success', 'textMessage' => 'message_delivered') );
+  }
 
 ?>
